@@ -789,7 +789,6 @@
     <Content Include="Scripts\myFocus.js" />
     <Content Include="Scripts\numtochinese.js" />
     <Content Include="Scripts\StageListShow.js" />
-    <Content Include="test.html" />
     <Content Include="Scripts\area\PCASClass.js" />
     <Content Include="Scripts\bootstrap\css\autocomplete-bootstrap.min.css" />
     <Content Include="Scripts\bootstrap\css\bootstrap-responsive.css" />
