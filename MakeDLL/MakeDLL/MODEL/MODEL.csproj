@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{23B9DD00-48A9-413D-8A2D-D87341193339}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MODEL</RootNamespace>
+    <AssemblyName>MODEL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\MODEL.XML</DocumentationFile>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FindAccounts.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindAdversitement.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindAlimama.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindApply.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindBackList.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindCircle.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindDevice.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindDictionary.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindDocument.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindFlow.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindFriendGroup.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindFriends.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindGame.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindGameRoom.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindHonor.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindInterest.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindMessage.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindMoney.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindPower.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindProduct.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindPublicMessage.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindRecharge.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindTrendComments.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindTrends.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindUsers.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindVerify.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindWithDrawCash.cs">
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MODEL.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MODEL.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="MODEL.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MODEL.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config" />
+    <None Include="MODEL.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MODEL.edmx</DependentUpon>
+      <LastGenOutput>MODEL.Context.cs</LastGenOutput>
+    </None>
+    <None Include="MODEL.edmx.diagram">
+      <DependentUpon>MODEL.edmx</DependentUpon>
+    </None>
+    <None Include="MODEL.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MODEL.edmx</DependentUpon>
+      <LastGenOutput>MODEL.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

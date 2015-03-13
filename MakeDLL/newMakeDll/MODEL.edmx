@@ -1,0 +1,3526 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BlueVacationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="FindAccounts">
+          <Key>
+            <PropertyRef Name="FaId" />
+          </Key>
+          <Property Name="FaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FuId" Type="int" />
+          <Property Name="FaName" Type="varchar" MaxLength="256" />
+          <Property Name="FaBalance" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FaNumber" Type="varchar" MaxLength="256" />
+          <Property Name="FaOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FaOperateDate" Type="datetime" />
+          <Property Name="FaStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindAdversitement">
+          <Key>
+            <PropertyRef Name="FadId" />
+          </Key>
+          <Property Name="FadId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FalId" Type="int" />
+          <Property Name="FadName" Type="varchar" MaxLength="256" />
+          <Property Name="FadTitle" Type="varchar" MaxLength="256" />
+          <Property Name="FadContnet" Type="varchar" MaxLength="2048" />
+          <Property Name="FadPubDate" Type="datetime" />
+          <Property Name="FadOutDate" Type="datetime" />
+          <Property Name="FadCompany" Type="varchar" MaxLength="256" />
+          <Property Name="FadFeeScale" Type="varchar" MaxLength="8000" />
+          <Property Name="FadPrice" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FadAdStatus" Type="varchar" MaxLength="256" />
+          <Property Name="FadOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FadOperateDate" Type="datetime" />
+          <Property Name="FadStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindAlimama">
+          <Key>
+            <PropertyRef Name="FalId" />
+          </Key>
+          <Property Name="FalId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FalName" Type="varchar" MaxLength="256" />
+          <Property Name="FalLength" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FalWidth" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FalAdStatus" Type="varchar" MaxLength="256" />
+          <Property Name="FalOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FalOperateDate" Type="datetime" />
+          <Property Name="FalStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindApply">
+          <Key>
+            <PropertyRef Name="FapId" />
+          </Key>
+          <Property Name="FapId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FuId" Type="int" />
+          <Property Name="FapType" Type="varchar" MaxLength="256" />
+          <Property Name="FapFor" Type="varchar" MaxLength="256" />
+          <Property Name="FapApplyDate" Type="datetime" />
+          <Property Name="FapApplyDescribe" Type="varchar" MaxLength="8000" />
+          <Property Name="FapApplyStatus" Type="varchar" MaxLength="256" />
+          <Property Name="FapOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FapOperateDate" Type="datetime" />
+          <Property Name="FapStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindBackList">
+          <Key>
+            <PropertyRef Name="FbId" />
+          </Key>
+          <Property Name="FbId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FuId" Type="int" />
+          <Property Name="FbBackId" Type="numeric" Precision="20" Scale="0" />
+          <Property Name="FbAddDate" Type="datetime" />
+          <Property Name="DbOperator" Type="varchar" MaxLength="256" />
+          <Property Name="DbOperateDate" Type="datetime" />
+          <Property Name="DbStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindCircle">
+          <Key>
+            <PropertyRef Name="FcId" />
+          </Key>
+          <Property Name="FcId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FuId" Type="int" />
+          <Property Name="FcName" Type="varchar" MaxLength="256" />
+          <Property Name="FcIntroduce" Type="varchar" MaxLength="2048" />
+          <Property Name="FcType" Type="varchar" MaxLength="256" />
+          <Property Name="FcLevel" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="FcIcon" Type="varchar" MaxLength="512" />
+          <Property Name="FcCreateDate" Type="datetime" />
+          <Property Name="FcOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FcOperateDate" Type="datetime" />
+          <Property Name="FcStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindDevice">
+          <Key>
+            <PropertyRef Name="FdeId" />
+          </Key>
+          <Property Name="FdeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FuId" Type="int" />
+          <Property Name="FdeName" Type="varchar" MaxLength="256" />
+          <Property Name="FdeFunction" Type="varchar" MaxLength="1024" />
+          <Property Name="FdeDescriabe" Type="varchar" MaxLength="2048" />
+          <Property Name="FdeOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FdeOperateDate" Type="datetime" />
+          <Property Name="FdeStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindDictionary">
+          <Key>
+            <PropertyRef Name="FdId" />
+          </Key>
+          <Property Name="FdId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FdType" Type="varchar" MaxLength="256" />
+          <Property Name="FdName" Type="varchar" MaxLength="512" />
+          <Property Name="FdValue" Type="varchar" MaxLength="2048" />
+          <Property Name="FdRemark" Type="varchar" MaxLength="8000" />
+          <Property Name="FdParentId" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="FdDictionaryStatus" Type="varchar" MaxLength="256" />
+          <Property Name="FdOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FdOperateDate" Type="datetime" />
+          <Property Name="FdStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindDocument">
+          <Key>
+            <PropertyRef Name="FdoId" />
+          </Key>
+          <Property Name="FdoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FuId" Type="int" />
+          <Property Name="FdoName" Type="varchar" MaxLength="256" />
+          <Property Name="FdoType" Type="varchar" MaxLength="256" />
+          <Property Name="FdoUseFor" Type="varchar" MaxLength="2048" />
+          <Property Name="FdoUrl" Type="varchar" MaxLength="1024" />
+          <Property Name="FdoOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FdoOperateDate" Type="datetime" />
+          <Property Name="FdoStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindFlow">
+          <Key>
+            <PropertyRef Name="FfId" />
+          </Key>
+          <Property Name="FfId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FuId" Type="int" />
+          <Property Name="FfNumber" Type="varchar" MaxLength="256" />
+          <Property Name="FfDate" Type="datetime" />
+          <Property Name="FfType" Type="varchar" MaxLength="256" />
+          <Property Name="FfDetails" Type="varchar" MaxLength="1024" />
+          <Property Name="FfAmountPaid" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FfAmountReceived" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FfBindNumber" Type="varchar" MaxLength="512" />
+          <Property Name="FfAutidingDate" Type="datetime" />
+          <Property Name="FfExchangeStatus" Type="varchar" MaxLength="256" />
+          <Property Name="FfOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FfOperateDate" Type="datetime" />
+          <Property Name="FfStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindFriendGroup">
+          <Key>
+            <PropertyRef Name="FfgId" />
+          </Key>
+          <Property Name="FfgId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FuId" Type="int" />
+          <Property Name="FfgName" Type="varchar" MaxLength="256" />
+          <Property Name="FfgDescribe" Type="varchar" MaxLength="2048" />
+          <Property Name="FfgOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FfgOperateDate" Type="datetime" />
+          <Property Name="FfgStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindFriends">
+          <Key>
+            <PropertyRef Name="FfrId" />
+          </Key>
+          <Property Name="FfrId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FuId" Type="int" />
+          <Property Name="FfgId" Type="int" />
+          <Property Name="FfrFriendsId" Type="int" />
+          <Property Name="FfrInterest" Type="bit" />
+          <Property Name="FfrRemark" Type="varchar" MaxLength="256" />
+          <Property Name="FfrAddDate" Type="datetime" />
+          <Property Name="FfrFriendStatus" Type="varchar" MaxLength="256" />
+          <Property Name="FfrOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FfrOperateDate" Type="datetime" />
+          <Property Name="FfrStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindGame">
+          <Key>
+            <PropertyRef Name="FgId" />
+          </Key>
+          <Property Name="FgId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FgName" Type="varchar" MaxLength="256" />
+          <Property Name="FgType" Type="varchar" MaxLength="256" />
+          <Property Name="FgDescribe" Type="varchar" MaxLength="8000" />
+          <Property Name="FgPersonCount" Type="numeric" Precision="20" Scale="0" />
+          <Property Name="FgPlayIntrodece" Type="varchar" MaxLength="8000" />
+          <Property Name="FgOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FgOperateDate" Type="datetime" />
+          <Property Name="FgStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindGameRoom">
+          <Key>
+            <PropertyRef Name="FgrId" />
+          </Key>
+          <Property Name="FgrId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FuId" Type="int" />
+          <Property Name="FgId" Type="int" />
+          <Property Name="FgrName" Type="varchar" MaxLength="256" />
+          <Property Name="FgrNumber" Type="varchar" MaxLength="256" />
+          <Property Name="FgrPersonCount" Type="numeric" Precision="20" Scale="0" />
+          <Property Name="FgrGameStatus" Type="varchar" MaxLength="256" />
+          <Property Name="FgrOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FgrOperateDate" Type="datetime" />
+          <Property Name="FgrStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindHonor">
+          <Key>
+            <PropertyRef Name="FhoId" />
+          </Key>
+          <Property Name="FhoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FuId" Type="int" />
+          <Property Name="FhoName" Type="varchar" MaxLength="256" />
+          <Property Name="FhoValue" Type="numeric" Precision="20" Scale="0" />
+          <Property Name="FhoUnit" Type="varchar" MaxLength="256" />
+          <Property Name="FhoDescribe" Type="varchar" MaxLength="2048" />
+          <Property Name="FhoOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FhoOperateDate" Type="datetime" />
+          <Property Name="FhoStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindInterest">
+          <Key>
+            <PropertyRef Name="FiId" />
+          </Key>
+          <Property Name="FiId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FiName" Type="varchar" MaxLength="256" />
+          <Property Name="FiIntroduce" Type="varchar" MaxLength="2048" />
+          <Property Name="FiOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FiOperateDate" Type="datetime" />
+          <Property Name="FiStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindMessage">
+          <Key>
+            <PropertyRef Name="FmId" />
+          </Key>
+          <Property Name="FmId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FuId" Type="int" />
+          <Property Name="FmTitle" Type="varchar" MaxLength="256" />
+          <Property Name="FmContent" Type="varchar" MaxLength="8000" />
+          <Property Name="FmReceives" Type="varchar" MaxLength="8000" />
+          <Property Name="FmType" Type="varchar" MaxLength="256" />
+          <Property Name="FmSendDate" Type="datetime" />
+          <Property Name="FmOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FmOperateDate" Type="datetime" />
+          <Property Name="FmStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindMoney">
+          <Key>
+            <PropertyRef Name="FmoId" />
+          </Key>
+          <Property Name="FmoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FuId" Type="int" />
+          <Property Name="FmoName" Type="varchar" MaxLength="256" />
+          <Property Name="FmoType" Type="varchar" MaxLength="256" />
+          <Property Name="FmoAmount" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FmoRate" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FmoDescribe" Type="varchar" MaxLength="2048" />
+          <Property Name="FmoUnit" Type="varchar" MaxLength="256" />
+          <Property Name="FmoOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FmoOperateDate" Type="datetime" />
+          <Property Name="FmoStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindPower">
+          <Key>
+            <PropertyRef Name="FpoId" />
+          </Key>
+          <Property Name="FpoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FuId" Type="int" />
+          <Property Name="FpoName" Type="varchar" MaxLength="256" />
+          <Property Name="FpoDescribe" Type="varchar" MaxLength="2048" />
+          <Property Name="FpoValue" Type="numeric" Precision="20" Scale="0" />
+          <Property Name="FpoOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FpoOperateDate" Type="datetime" />
+          <Property Name="FpoStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindProduct">
+          <Key>
+            <PropertyRef Name="FpId" />
+          </Key>
+          <Property Name="FpId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FpName" Type="varchar" MaxLength="256" />
+          <Property Name="FpPrice" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FpDescribe" Type="varchar" MaxLength="2048" />
+          <Property Name="FpPicture" Type="varchar" MaxLength="256" />
+          <Property Name="FpCostPrice" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FpStock" Type="numeric" Precision="20" Scale="0" />
+          <Property Name="FpOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FpOperateDate" Type="datetime" />
+          <Property Name="FpStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindPublicMessage">
+          <Key>
+            <PropertyRef Name="FpmId" />
+          </Key>
+          <Property Name="FpmId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FuId" Type="int" />
+          <Property Name="FpmType" Type="varchar" MaxLength="256" />
+          <Property Name="FpmBinding" Type="varchar" MaxLength="256" />
+          <Property Name="FpmTitle" Type="varchar" MaxLength="256" />
+          <Property Name="FpmConent" Type="varchar" MaxLength="8000" />
+          <Property Name="FpmPublishDate" Type="datetime" />
+          <Property Name="FpmOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FpmOperateDate" Type="datetime" />
+          <Property Name="FpmStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindRecharge">
+          <Key>
+            <PropertyRef Name="FrId" />
+          </Key>
+          <Property Name="FrId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FuId" Type="int" />
+          <Property Name="FrAmount" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FrRechargeDate" Type="datetime" />
+          <Property Name="FrRechargeStatus" Type="varchar" MaxLength="256" />
+          <Property Name="FrIntroduce" Type="varchar" MaxLength="2048" />
+          <Property Name="FrAuditor" Type="varchar" MaxLength="256" />
+          <Property Name="FrAuditorDate" Type="datetime" />
+          <Property Name="FrOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FrOperateDate" Type="datetime" />
+          <Property Name="FrStatus" Type="varchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="FindTrendComments">
+          <Key>
+            <PropertyRef Name="FtcId" />
+          </Key>
+          <Property Name="FtcId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FtrId" Type="int" />
+          <Property Name="FuId" Type="int" />
+          <Property Name="FtcAppendix" Type="varchar" MaxLength="2048" />
+          <Property Name="FtcPublishDate" Type="datetime" />
+          <Property Name="FtcContent" Type="varchar" MaxLength="8000" />
+          <Property Name="FtcReadCounts" Type="numeric" Precision="20" Scale="0" />
+          <Property Name="FtcLisks" Type="numeric" Precision="20" Scale="0" />
+          <Property Name="FtcOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FtcOperateDate" Type="datetime" />
+          <Property Name="FtcStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindTrends">
+          <Key>
+            <PropertyRef Name="FtrId" />
+          </Key>
+          <Property Name="FtrId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FuId" Type="int" />
+          <Property Name="FtrTitle" Type="varchar" MaxLength="256" />
+          <Property Name="FtrContent" Type="varchar" MaxLength="1024" />
+          <Property Name="FtrAppendix" Type="varchar" MaxLength="512" />
+          <Property Name="FtrPublishDate" Type="datetime" />
+          <Property Name="FtrFrom" Type="varchar" MaxLength="512" />
+          <Property Name="FtrReadCount" Type="numeric" Precision="20" Scale="0" />
+          <Property Name="FtrLinks" Type="numeric" Precision="20" Scale="0" />
+          <Property Name="FtrOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FtrOperateDate" Type="datetime" />
+          <Property Name="FtrStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindUsers">
+          <Key>
+            <PropertyRef Name="FuId" />
+          </Key>
+          <Property Name="FuId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FuName" Type="varchar" MaxLength="256" />
+          <Property Name="FuRealName" Type="varchar" MaxLength="256" />
+          <Property Name="FuNickName" Type="varchar" MaxLength="256" />
+          <Property Name="FuSex" Type="varchar" MaxLength="64" />
+          <Property Name="FuPassword" Type="varchar" MaxLength="256" />
+          <Property Name="FuAge" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="FuAddress" Type="varchar" MaxLength="1024" />
+          <Property Name="FuProvience" Type="varchar" MaxLength="256" />
+          <Property Name="FuCity" Type="varchar" MaxLength="256" />
+          <Property Name="FuCounty" Type="varchar" MaxLength="256" />
+          <Property Name="FuEmail" Type="varchar" MaxLength="256" />
+          <Property Name="FuTeleph" Type="varchar" MaxLength="256" />
+          <Property Name="FuNationality" Type="varchar" MaxLength="64" />
+          <Property Name="FuNation" Type="varchar" MaxLength="64" />
+          <Property Name="FuConstellation" Type="varchar" MaxLength="256" />
+          <Property Name="FuBloodType" Type="varchar" MaxLength="256" />
+          <Property Name="FuStature" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FuWeight" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FuHomepace" Type="varchar" MaxLength="1024" />
+          <Property Name="FuDateBirth" Type="datetime" />
+          <Property Name="FuVocation" Type="varchar" MaxLength="256" />
+          <Property Name="FuQq" Type="numeric" Precision="30" Scale="0" />
+          <Property Name="FuGraduateSchool" Type="varchar" MaxLength="256" />
+          <Property Name="FuCurrentCompany" Type="varchar" MaxLength="256" />
+          <Property Name="FuSpecialSkill" Type="varchar" MaxLength="256" />
+          <Property Name="FuAccomplish" Type="varchar" MaxLength="8000" />
+          <Property Name="FuEmpiricValue" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="FuVipLevel" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="FuHeadSculpture1" Type="varchar" MaxLength="512" />
+          <Property Name="FuHeadSculpture2" Type="varchar" MaxLength="512" />
+          <Property Name="FuRegisterDate" Type="datetime" />
+          <Property Name="FuOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FuOperateDate" Type="datetime" />
+          <Property Name="FuStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindVerify">
+          <Key>
+            <PropertyRef Name="FveId" />
+          </Key>
+          <Property Name="FveId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FuId" Type="int" />
+          <Property Name="FveType" Type="varchar" MaxLength="256" />
+          <Property Name="FveQuestion" Type="varchar" MaxLength="1024" />
+          <Property Name="FveAnswer" Type="varchar" MaxLength="2048" />
+          <Property Name="FveFor" Type="varchar" MaxLength="512" />
+          <Property Name="FveVerifyStatus" Type="varchar" MaxLength="256" />
+          <Property Name="FveOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FveOperateDate" Type="datetime" />
+          <Property Name="FveStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="FindWithDrawCash">
+          <Key>
+            <PropertyRef Name="FwcId" />
+          </Key>
+          <Property Name="FwcId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FuId" Type="int" />
+          <Property Name="FaId" Type="int" />
+          <Property Name="FwcAmount" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FwcWithDrawDate" Type="datetime" />
+          <Property Name="FwcWithDrawStatus" Type="varchar" MaxLength="256" />
+          <Property Name="FwcWithDrawIntroduce" Type="varchar" MaxLength="8000" />
+          <Property Name="Fwc" Type="varchar" MaxLength="256" />
+          <Property Name="FwcAuditDate" Type="datetime" />
+          <Property Name="FwcOperator" Type="varchar" MaxLength="256" />
+          <Property Name="FwcOperateDate" Type="datetime" />
+          <Property Name="FwcStatus" Type="bit" />
+        </EntityType>
+        <Association Name="FK_FINDACCO_FINDUSERS_FINDUSER">
+          <End Role="FindUsers" Type="Self.FindUsers" Multiplicity="0..1" />
+          <End Role="FindAccounts" Type="Self.FindAccounts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindAccounts">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDADVE_ALIMAM-AD_FINDALIM">
+          <End Role="FindAlimama" Type="Self.FindAlimama" Multiplicity="0..1" />
+          <End Role="FindAdversitement" Type="Self.FindAdversitement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindAlimama">
+              <PropertyRef Name="FalId" />
+            </Principal>
+            <Dependent Role="FindAdversitement">
+              <PropertyRef Name="FalId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDAPPL_USERS-APP_FINDUSER">
+          <End Role="FindUsers" Type="Self.FindUsers" Multiplicity="0..1" />
+          <End Role="FindApply" Type="Self.FindApply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindApply">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDBACK_USERS-BAC_FINDUSER">
+          <End Role="FindUsers" Type="Self.FindUsers" Multiplicity="0..1" />
+          <End Role="FindBackList" Type="Self.FindBackList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindBackList">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDCIRC_FINDUSERS_FINDUSER">
+          <End Role="FindUsers" Type="Self.FindUsers" Multiplicity="0..1" />
+          <End Role="FindCircle" Type="Self.FindCircle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindCircle">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDDEVI_USERS-DEV_FINDUSER">
+          <End Role="FindUsers" Type="Self.FindUsers" Multiplicity="0..1" />
+          <End Role="FindDevice" Type="Self.FindDevice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindDevice">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDDOCU_USERS-DOC_FINDUSER">
+          <End Role="FindUsers" Type="Self.FindUsers" Multiplicity="0..1" />
+          <End Role="FindDocument" Type="Self.FindDocument" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindDocument">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDFLOW_FINDUSERS_FINDUSER">
+          <End Role="FindUsers" Type="Self.FindUsers" Multiplicity="0..1" />
+          <End Role="FindFlow" Type="Self.FindFlow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindFlow">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDFRIE_RELATIONS_FINDFRIE">
+          <End Role="FindFriendGroup" Type="Self.FindFriendGroup" Multiplicity="0..1" />
+          <End Role="FindFriends" Type="Self.FindFriends" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindFriendGroup">
+              <PropertyRef Name="FfgId" />
+            </Principal>
+            <Dependent Role="FindFriends">
+              <PropertyRef Name="FfgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDFRIE_RELATIONS_FINDUSER">
+          <End Role="FindUsers" Type="Self.FindUsers" Multiplicity="0..1" />
+          <End Role="FindFriendGroup" Type="Self.FindFriendGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindFriendGroup">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDFRIE_USERS-FRI_FINDUSER">
+          <End Role="FindUsers" Type="Self.FindUsers" Multiplicity="0..1" />
+          <End Role="FindFriends" Type="Self.FindFriends" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindFriends">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDGAME_GAME-GAME_FINDGAME">
+          <End Role="FindGame" Type="Self.FindGame" Multiplicity="0..1" />
+          <End Role="FindGameRoom" Type="Self.FindGameRoom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindGame">
+              <PropertyRef Name="FgId" />
+            </Principal>
+            <Dependent Role="FindGameRoom">
+              <PropertyRef Name="FgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDGAME_USERS-GAM_FINDUSER">
+          <End Role="FindUsers" Type="Self.FindUsers" Multiplicity="0..1" />
+          <End Role="FindGameRoom" Type="Self.FindGameRoom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindGameRoom">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDHONO_USERS-HON_FINDUSER">
+          <End Role="FindUsers" Type="Self.FindUsers" Multiplicity="0..1" />
+          <End Role="FindHonor" Type="Self.FindHonor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindHonor">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDMESS_USERS-MES_FINDUSER">
+          <End Role="FindUsers" Type="Self.FindUsers" Multiplicity="0..1" />
+          <End Role="FindMessage" Type="Self.FindMessage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindMessage">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDMONE_USERS-MON_FINDUSER">
+          <End Role="FindUsers" Type="Self.FindUsers" Multiplicity="0..1" />
+          <End Role="FindMoney" Type="Self.FindMoney" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindMoney">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDPOWE_USERS-POW_FINDUSER">
+          <End Role="FindUsers" Type="Self.FindUsers" Multiplicity="0..1" />
+          <End Role="FindPower" Type="Self.FindPower" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindPower">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDPUBL_FINDUSERS_FINDUSER">
+          <End Role="FindUsers" Type="Self.FindUsers" Multiplicity="0..1" />
+          <End Role="FindPublicMessage" Type="Self.FindPublicMessage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindPublicMessage">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDRECH_FINDUSERS_FINDUSER">
+          <End Role="FindUsers" Type="Self.FindUsers" Multiplicity="0..1" />
+          <End Role="FindRecharge" Type="Self.FindRecharge" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindRecharge">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDTREN_RELATIONS_FINDUSER">
+          <End Role="FindUsers" Type="Self.FindUsers" Multiplicity="0..1" />
+          <End Role="FindTrends" Type="Self.FindTrends" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindTrends">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDTREN_TRENDS-TR_FINDTREN">
+          <End Role="FindTrends" Type="Self.FindTrends" Multiplicity="0..1" />
+          <End Role="FindTrendComments" Type="Self.FindTrendComments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindTrends">
+              <PropertyRef Name="FtrId" />
+            </Principal>
+            <Dependent Role="FindTrendComments">
+              <PropertyRef Name="FtrId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDTREN_USERS-TRE_FINDUSER">
+          <End Role="FindUsers" Type="Self.FindUsers" Multiplicity="0..1" />
+          <End Role="FindTrendComments" Type="Self.FindTrendComments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindTrendComments">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDVERI_USER-VERI_FINDUSER">
+          <End Role="FindUsers" Type="Self.FindUsers" Multiplicity="0..1" />
+          <End Role="FindVerify" Type="Self.FindVerify" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindVerify">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDWITH_ACCOUNTS-_FINDACCO">
+          <End Role="FindAccounts" Type="Self.FindAccounts" Multiplicity="0..1" />
+          <End Role="FindWithDrawCash" Type="Self.FindWithDrawCash" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindAccounts">
+              <PropertyRef Name="FaId" />
+            </Principal>
+            <Dependent Role="FindWithDrawCash">
+              <PropertyRef Name="FaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDWITH_USERS-WIT_FINDUSER">
+          <End Role="FindUsers" Type="Self.FindUsers" Multiplicity="0..1" />
+          <End Role="FindWithDrawCash" Type="Self.FindWithDrawCash" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindWithDrawCash">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BlueVacationModelStoreContainer">
+          <EntitySet Name="FindAccounts" EntityType="Self.FindAccounts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindAdversitement" EntityType="Self.FindAdversitement" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindAlimama" EntityType="Self.FindAlimama" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindApply" EntityType="Self.FindApply" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindBackList" EntityType="Self.FindBackList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindCircle" EntityType="Self.FindCircle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindDevice" EntityType="Self.FindDevice" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindDictionary" EntityType="Self.FindDictionary" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindDocument" EntityType="Self.FindDocument" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindFlow" EntityType="Self.FindFlow" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindFriendGroup" EntityType="Self.FindFriendGroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindFriends" EntityType="Self.FindFriends" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindGame" EntityType="Self.FindGame" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindGameRoom" EntityType="Self.FindGameRoom" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindHonor" EntityType="Self.FindHonor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindInterest" EntityType="Self.FindInterest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindMessage" EntityType="Self.FindMessage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindMoney" EntityType="Self.FindMoney" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindPower" EntityType="Self.FindPower" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindProduct" EntityType="Self.FindProduct" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindPublicMessage" EntityType="Self.FindPublicMessage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindRecharge" EntityType="Self.FindRecharge" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindTrendComments" EntityType="Self.FindTrendComments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindTrends" EntityType="Self.FindTrends" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindUsers" EntityType="Self.FindUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindVerify" EntityType="Self.FindVerify" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FindWithDrawCash" EntityType="Self.FindWithDrawCash" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_FINDACCO_FINDUSERS_FINDUSER" Association="Self.FK_FINDACCO_FINDUSERS_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindAccounts" EntitySet="FindAccounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDADVE_ALIMAM-AD_FINDALIM" Association="Self.FK_FINDADVE_ALIMAM-AD_FINDALIM">
+            <End Role="FindAlimama" EntitySet="FindAlimama" />
+            <End Role="FindAdversitement" EntitySet="FindAdversitement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDAPPL_USERS-APP_FINDUSER" Association="Self.FK_FINDAPPL_USERS-APP_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindApply" EntitySet="FindApply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDBACK_USERS-BAC_FINDUSER" Association="Self.FK_FINDBACK_USERS-BAC_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindBackList" EntitySet="FindBackList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDCIRC_FINDUSERS_FINDUSER" Association="Self.FK_FINDCIRC_FINDUSERS_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindCircle" EntitySet="FindCircle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDDEVI_USERS-DEV_FINDUSER" Association="Self.FK_FINDDEVI_USERS-DEV_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindDevice" EntitySet="FindDevice" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDDOCU_USERS-DOC_FINDUSER" Association="Self.FK_FINDDOCU_USERS-DOC_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindDocument" EntitySet="FindDocument" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDFLOW_FINDUSERS_FINDUSER" Association="Self.FK_FINDFLOW_FINDUSERS_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindFlow" EntitySet="FindFlow" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDFRIE_RELATIONS_FINDFRIE" Association="Self.FK_FINDFRIE_RELATIONS_FINDFRIE">
+            <End Role="FindFriendGroup" EntitySet="FindFriendGroup" />
+            <End Role="FindFriends" EntitySet="FindFriends" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDFRIE_RELATIONS_FINDUSER" Association="Self.FK_FINDFRIE_RELATIONS_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindFriendGroup" EntitySet="FindFriendGroup" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDFRIE_USERS-FRI_FINDUSER" Association="Self.FK_FINDFRIE_USERS-FRI_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindFriends" EntitySet="FindFriends" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDGAME_GAME-GAME_FINDGAME" Association="Self.FK_FINDGAME_GAME-GAME_FINDGAME">
+            <End Role="FindGame" EntitySet="FindGame" />
+            <End Role="FindGameRoom" EntitySet="FindGameRoom" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDGAME_USERS-GAM_FINDUSER" Association="Self.FK_FINDGAME_USERS-GAM_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindGameRoom" EntitySet="FindGameRoom" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDHONO_USERS-HON_FINDUSER" Association="Self.FK_FINDHONO_USERS-HON_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindHonor" EntitySet="FindHonor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDMESS_USERS-MES_FINDUSER" Association="Self.FK_FINDMESS_USERS-MES_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindMessage" EntitySet="FindMessage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDMONE_USERS-MON_FINDUSER" Association="Self.FK_FINDMONE_USERS-MON_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindMoney" EntitySet="FindMoney" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDPOWE_USERS-POW_FINDUSER" Association="Self.FK_FINDPOWE_USERS-POW_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindPower" EntitySet="FindPower" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDPUBL_FINDUSERS_FINDUSER" Association="Self.FK_FINDPUBL_FINDUSERS_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindPublicMessage" EntitySet="FindPublicMessage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDRECH_FINDUSERS_FINDUSER" Association="Self.FK_FINDRECH_FINDUSERS_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindRecharge" EntitySet="FindRecharge" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDTREN_RELATIONS_FINDUSER" Association="Self.FK_FINDTREN_RELATIONS_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindTrends" EntitySet="FindTrends" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDTREN_TRENDS-TR_FINDTREN" Association="Self.FK_FINDTREN_TRENDS-TR_FINDTREN">
+            <End Role="FindTrends" EntitySet="FindTrends" />
+            <End Role="FindTrendComments" EntitySet="FindTrendComments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDTREN_USERS-TRE_FINDUSER" Association="Self.FK_FINDTREN_USERS-TRE_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindTrendComments" EntitySet="FindTrendComments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDVERI_USER-VERI_FINDUSER" Association="Self.FK_FINDVERI_USER-VERI_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindVerify" EntitySet="FindVerify" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDWITH_ACCOUNTS-_FINDACCO" Association="Self.FK_FINDWITH_ACCOUNTS-_FINDACCO">
+            <End Role="FindAccounts" EntitySet="FindAccounts" />
+            <End Role="FindWithDrawCash" EntitySet="FindWithDrawCash" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDWITH_USERS-WIT_FINDUSER" Association="Self.FK_FINDWITH_USERS-WIT_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindWithDrawCash" EntitySet="FindWithDrawCash" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BlueVacationModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="BlueVacationEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="FindAccounts" EntityType="BlueVacationModel.FindAccounts" />
+          <EntitySet Name="FindAdversitement" EntityType="BlueVacationModel.FindAdversitement" />
+          <EntitySet Name="FindAlimama" EntityType="BlueVacationModel.FindAlimama" />
+          <EntitySet Name="FindApply" EntityType="BlueVacationModel.FindApply" />
+          <EntitySet Name="FindBackList" EntityType="BlueVacationModel.FindBackList" />
+          <EntitySet Name="FindCircle" EntityType="BlueVacationModel.FindCircle" />
+          <EntitySet Name="FindDevice" EntityType="BlueVacationModel.FindDevice" />
+          <EntitySet Name="FindDictionary" EntityType="BlueVacationModel.FindDictionary" />
+          <EntitySet Name="FindDocument" EntityType="BlueVacationModel.FindDocument" />
+          <EntitySet Name="FindFlow" EntityType="BlueVacationModel.FindFlow" />
+          <EntitySet Name="FindFriendGroup" EntityType="BlueVacationModel.FindFriendGroup" />
+          <EntitySet Name="FindFriends" EntityType="BlueVacationModel.FindFriends" />
+          <EntitySet Name="FindGame" EntityType="BlueVacationModel.FindGame" />
+          <EntitySet Name="FindGameRoom" EntityType="BlueVacationModel.FindGameRoom" />
+          <EntitySet Name="FindHonor" EntityType="BlueVacationModel.FindHonor" />
+          <EntitySet Name="FindInterest" EntityType="BlueVacationModel.FindInterest" />
+          <EntitySet Name="FindMessage" EntityType="BlueVacationModel.FindMessage" />
+          <EntitySet Name="FindMoney" EntityType="BlueVacationModel.FindMoney" />
+          <EntitySet Name="FindPower" EntityType="BlueVacationModel.FindPower" />
+          <EntitySet Name="FindProduct" EntityType="BlueVacationModel.FindProduct" />
+          <EntitySet Name="FindPublicMessage" EntityType="BlueVacationModel.FindPublicMessage" />
+          <EntitySet Name="FindRecharge" EntityType="BlueVacationModel.FindRecharge" />
+          <EntitySet Name="FindTrendComments" EntityType="BlueVacationModel.FindTrendComments" />
+          <EntitySet Name="FindTrends" EntityType="BlueVacationModel.FindTrends" />
+          <EntitySet Name="FindUsers" EntityType="BlueVacationModel.FindUsers" />
+          <EntitySet Name="FindVerify" EntityType="BlueVacationModel.FindVerify" />
+          <EntitySet Name="FindWithDrawCash" EntityType="BlueVacationModel.FindWithDrawCash" />
+          <AssociationSet Name="FK_FINDACCO_FINDUSERS_FINDUSER" Association="BlueVacationModel.FK_FINDACCO_FINDUSERS_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindAccounts" EntitySet="FindAccounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDWITH_ACCOUNTS__FINDACCO" Association="BlueVacationModel.FK_FINDWITH_ACCOUNTS__FINDACCO">
+            <End Role="FindAccounts" EntitySet="FindAccounts" />
+            <End Role="FindWithDrawCash" EntitySet="FindWithDrawCash" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDADVE_ALIMAM_AD_FINDALIM" Association="BlueVacationModel.FK_FINDADVE_ALIMAM_AD_FINDALIM">
+            <End Role="FindAlimama" EntitySet="FindAlimama" />
+            <End Role="FindAdversitement" EntitySet="FindAdversitement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDAPPL_USERS_APP_FINDUSER" Association="BlueVacationModel.FK_FINDAPPL_USERS_APP_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindApply" EntitySet="FindApply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDBACK_USERS_BAC_FINDUSER" Association="BlueVacationModel.FK_FINDBACK_USERS_BAC_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindBackList" EntitySet="FindBackList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDCIRC_FINDUSERS_FINDUSER" Association="BlueVacationModel.FK_FINDCIRC_FINDUSERS_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindCircle" EntitySet="FindCircle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDDEVI_USERS_DEV_FINDUSER" Association="BlueVacationModel.FK_FINDDEVI_USERS_DEV_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindDevice" EntitySet="FindDevice" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDDOCU_USERS_DOC_FINDUSER" Association="BlueVacationModel.FK_FINDDOCU_USERS_DOC_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindDocument" EntitySet="FindDocument" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDFLOW_FINDUSERS_FINDUSER" Association="BlueVacationModel.FK_FINDFLOW_FINDUSERS_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindFlow" EntitySet="FindFlow" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDFRIE_RELATIONS_FINDFRIE" Association="BlueVacationModel.FK_FINDFRIE_RELATIONS_FINDFRIE">
+            <End Role="FindFriendGroup" EntitySet="FindFriendGroup" />
+            <End Role="FindFriends" EntitySet="FindFriends" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDFRIE_RELATIONS_FINDUSER" Association="BlueVacationModel.FK_FINDFRIE_RELATIONS_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindFriendGroup" EntitySet="FindFriendGroup" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDFRIE_USERS_FRI_FINDUSER" Association="BlueVacationModel.FK_FINDFRIE_USERS_FRI_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindFriends" EntitySet="FindFriends" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDGAME_GAME_GAME_FINDGAME" Association="BlueVacationModel.FK_FINDGAME_GAME_GAME_FINDGAME">
+            <End Role="FindGame" EntitySet="FindGame" />
+            <End Role="FindGameRoom" EntitySet="FindGameRoom" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDGAME_USERS_GAM_FINDUSER" Association="BlueVacationModel.FK_FINDGAME_USERS_GAM_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindGameRoom" EntitySet="FindGameRoom" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDHONO_USERS_HON_FINDUSER" Association="BlueVacationModel.FK_FINDHONO_USERS_HON_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindHonor" EntitySet="FindHonor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDMESS_USERS_MES_FINDUSER" Association="BlueVacationModel.FK_FINDMESS_USERS_MES_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindMessage" EntitySet="FindMessage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDMONE_USERS_MON_FINDUSER" Association="BlueVacationModel.FK_FINDMONE_USERS_MON_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindMoney" EntitySet="FindMoney" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDPOWE_USERS_POW_FINDUSER" Association="BlueVacationModel.FK_FINDPOWE_USERS_POW_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindPower" EntitySet="FindPower" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDPUBL_FINDUSERS_FINDUSER" Association="BlueVacationModel.FK_FINDPUBL_FINDUSERS_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindPublicMessage" EntitySet="FindPublicMessage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDRECH_FINDUSERS_FINDUSER" Association="BlueVacationModel.FK_FINDRECH_FINDUSERS_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindRecharge" EntitySet="FindRecharge" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDTREN_TRENDS_TR_FINDTREN" Association="BlueVacationModel.FK_FINDTREN_TRENDS_TR_FINDTREN">
+            <End Role="FindTrends" EntitySet="FindTrends" />
+            <End Role="FindTrendComments" EntitySet="FindTrendComments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDTREN_USERS_TRE_FINDUSER" Association="BlueVacationModel.FK_FINDTREN_USERS_TRE_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindTrendComments" EntitySet="FindTrendComments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDTREN_RELATIONS_FINDUSER" Association="BlueVacationModel.FK_FINDTREN_RELATIONS_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindTrends" EntitySet="FindTrends" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDVERI_USER_VERI_FINDUSER" Association="BlueVacationModel.FK_FINDVERI_USER_VERI_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindVerify" EntitySet="FindVerify" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FINDWITH_USERS_WIT_FINDUSER" Association="BlueVacationModel.FK_FINDWITH_USERS_WIT_FINDUSER">
+            <End Role="FindUsers" EntitySet="FindUsers" />
+            <End Role="FindWithDrawCash" EntitySet="FindWithDrawCash" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="FindAccounts">
+	 <Documentation>
+		<Summary>账户表</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FaId" />
+          </Key>
+	<Property Name="FaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>账户表Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuId" Type="Int32" >
+	 <Documentation>
+		<Summary>用户表Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FaName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>账户名称</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FaBalance" Type="Decimal" Precision="18" Scale="0" >
+	 <Documentation>
+		<Summary>账户金额</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FaNumber" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>账户编号</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FaOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FaOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FaStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>操作状态</Summary>
+	</Documentation>
+</Property>
+          <NavigationProperty Name="FindUsers" Relationship="BlueVacationModel.FK_FINDACCO_FINDUSERS_FINDUSER" FromRole="FindAccounts" ToRole="FindUsers" />
+          <NavigationProperty Name="FindWithDrawCash" Relationship="BlueVacationModel.FK_FINDWITH_ACCOUNTS__FINDACCO" FromRole="FindAccounts" ToRole="FindWithDrawCash" />
+        
+</EntityType>
+        <EntityType Name="FindAdversitement">
+	 <Documentation>
+		<Summary>广告</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FadId" />
+          </Key>
+	<Property Name="FadId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>广告ID</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FalId" Type="Int32" >
+	 <Documentation>
+		<Summary>广告位ID</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FadName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>名称</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FadTitle" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>标题</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FadContnet" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>内容</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FadPubDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>上架时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FadOutDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>下架时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FadCompany" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>公司名称</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FadFeeScale" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>收费标准</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FadPrice" Type="Decimal" Precision="18" Scale="0" >
+	 <Documentation>
+		<Summary>单价</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FadAdStatus" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>广告状态</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FadOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FadOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FadStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>状态</Summary>
+	</Documentation>
+</Property>
+          <NavigationProperty Name="FindAlimama" Relationship="BlueVacationModel.FK_FINDADVE_ALIMAM_AD_FINDALIM" FromRole="FindAdversitement" ToRole="FindAlimama" />
+        
+</EntityType>
+        <EntityType Name="FindAlimama">
+	 <Documentation>
+		<Summary>广告位</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FalId" />
+          </Key>
+	<Property Name="FalId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>广告位ID</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FalName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>名称</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FalLength" Type="Decimal" Precision="18" Scale="0" >
+	 <Documentation>
+		<Summary>长度</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FalWidth" Type="Decimal" Precision="18" Scale="0" >
+	 <Documentation>
+		<Summary>宽度</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FalAdStatus" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>广告位状态</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FalOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FalOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FalStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>状态</Summary>
+	</Documentation>
+</Property>
+          <NavigationProperty Name="FindAdversitement" Relationship="BlueVacationModel.FK_FINDADVE_ALIMAM_AD_FINDALIM" FromRole="FindAlimama" ToRole="FindAdversitement" />
+        
+</EntityType>
+        <EntityType Name="FindApply">
+	 <Documentation>
+		<Summary>申请</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FapId" />
+          </Key>
+	<Property Name="FapId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>申请ID</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuId" Type="Int32" >
+	 <Documentation>
+		<Summary>用户表Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FapType" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>申请类型</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FapFor" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>申请对象</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FapApplyDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>申请时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FapApplyDescribe" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>申请描述</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FapApplyStatus" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>申请状态</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FapOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FapOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FapStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>状态</Summary>
+	</Documentation>
+</Property>
+          <NavigationProperty Name="FindUsers" Relationship="BlueVacationModel.FK_FINDAPPL_USERS_APP_FINDUSER" FromRole="FindApply" ToRole="FindUsers" />
+        
+</EntityType>
+        <EntityType Name="FindBackList">
+	 <Documentation>
+		<Summary>黑名单</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FbId" />
+          </Key>
+	<Property Name="FbId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>黑名单Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuId" Type="Int32" >
+	 <Documentation>
+		<Summary>用户表Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FbBackId" Type="Decimal" Precision="20" Scale="0" >
+	 <Documentation>
+		<Summary>黑名单好友</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FbAddDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>添加时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="DbOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="DbOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="DbStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>状态</Summary>
+	</Documentation>
+</Property>
+          <NavigationProperty Name="FindUsers" Relationship="BlueVacationModel.FK_FINDBACK_USERS_BAC_FINDUSER" FromRole="FindBackList" ToRole="FindUsers" />
+        
+</EntityType>
+        <EntityType Name="FindCircle">
+	 <Documentation>
+		<Summary>圈子</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FcId" />
+          </Key>
+	<Property Name="FcId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>圈子Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuId" Type="Int32" >
+	 <Documentation>
+		<Summary>用户表Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FcName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>名称</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FcIntroduce" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>简介</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FcType" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>类型</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FcLevel" Type="Decimal" Precision="18" Scale="0" >
+	 <Documentation>
+		<Summary>圈子等级</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FcIcon" Type="String" MaxLength="512" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>图标</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FcCreateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>创建时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FcOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FcOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FcStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>状态</Summary>
+	</Documentation>
+</Property>
+          <NavigationProperty Name="FindUsers" Relationship="BlueVacationModel.FK_FINDCIRC_FINDUSERS_FINDUSER" FromRole="FindCircle" ToRole="FindUsers" />
+        
+</EntityType>
+        <EntityType Name="FindDevice">
+	 <Documentation>
+		<Summary>设备</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FdeId" />
+          </Key>
+	<Property Name="FdeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>设备ID</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuId" Type="Int32" >
+	 <Documentation>
+		<Summary>用户表Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FdeName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>设备名称</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FdeFunction" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>设备功能</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FdeDescriabe" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>设备介绍</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FdeOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FdeOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FdeStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>状态</Summary>
+	</Documentation>
+</Property>
+          <NavigationProperty Name="FindUsers" Relationship="BlueVacationModel.FK_FINDDEVI_USERS_DEV_FINDUSER" FromRole="FindDevice" ToRole="FindUsers" />
+        
+</EntityType>
+        <EntityType Name="FindDictionary">
+	 <Documentation>
+		<Summary>数据字典</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FdId" />
+          </Key>
+	<Property Name="FdId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>字典ID</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FdType" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>类型</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FdName" Type="String" MaxLength="512" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>名称</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FdValue" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>数值</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FdRemark" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>备注</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FdParentId" Type="Decimal" Precision="18" Scale="0" >
+	 <Documentation>
+		<Summary>父级Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FdDictionaryStatus" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>字典状态</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FdOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FdOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FdStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>状态</Summary>
+	</Documentation>
+</Property>
+        
+</EntityType>
+        <EntityType Name="FindDocument">
+	 <Documentation>
+		<Summary>文件表</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FdoId" />
+          </Key>
+	<Property Name="FdoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>文件ID</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuId" Type="Int32" >
+	 <Documentation>
+		<Summary>用户表Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FdoName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>名称</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FdoType" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>类型</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FdoUseFor" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>用途</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FdoUrl" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>路径</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FdoOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FdoOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FdoStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>状态</Summary>
+	</Documentation>
+</Property>
+          <NavigationProperty Name="FindUsers" Relationship="BlueVacationModel.FK_FINDDOCU_USERS_DOC_FINDUSER" FromRole="FindDocument" ToRole="FindUsers" />
+        
+</EntityType>
+        <EntityType Name="FindFlow">
+	 <Documentation>
+		<Summary>流水记录</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FfId" />
+          </Key>
+	<Property Name="FfId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>流水ID</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuId" Type="Int32" >
+	 <Documentation>
+		<Summary>用户表Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfNumber" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>流水编号</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>交易时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfType" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>交易类型</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfDetails" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>交易明细</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfAmountPaid" Type="Decimal" Precision="18" Scale="0" >
+	 <Documentation>
+		<Summary>支出金额</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfAmountReceived" Type="Decimal" Precision="18" Scale="0" >
+	 <Documentation>
+		<Summary>收入金额</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfBindNumber" Type="String" MaxLength="512" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>绑定单号</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfAutidingDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>审核日期</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfExchangeStatus" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>交易状态</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>状态</Summary>
+	</Documentation>
+</Property>
+          <NavigationProperty Name="FindUsers" Relationship="BlueVacationModel.FK_FINDFLOW_FINDUSERS_FINDUSER" FromRole="FindFlow" ToRole="FindUsers" />
+        
+</EntityType>
+        <EntityType Name="FindFriendGroup">
+	 <Documentation>
+		<Summary>好友分组</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FfgId" />
+          </Key>
+	<Property Name="FfgId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>分组ID</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuId" Type="Int32" >
+	 <Documentation>
+		<Summary>用户表Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfgName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>名称</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfgDescribe" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>说明</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfgOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfgOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfgStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>状态</Summary>
+	</Documentation>
+</Property>
+          <NavigationProperty Name="FindFriends" Relationship="BlueVacationModel.FK_FINDFRIE_RELATIONS_FINDFRIE" FromRole="FindFriendGroup" ToRole="FindFriends" />
+          <NavigationProperty Name="FindUsers" Relationship="BlueVacationModel.FK_FINDFRIE_RELATIONS_FINDUSER" FromRole="FindFriendGroup" ToRole="FindUsers" />
+        
+</EntityType>
+        <EntityType Name="FindFriends">
+	 <Documentation>
+		<Summary>好友关系</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FfrId" />
+          </Key>
+	<Property Name="FfrId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>关系ID</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuId" Type="Int32" >
+	 <Documentation>
+		<Summary>用户表Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfgId" Type="Int32" >
+	 <Documentation>
+		<Summary>分组ID</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfrFriendsId" Type="Int32" >
+	 <Documentation>
+		<Summary>好友</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfrInterest" Type="Boolean" >
+	 <Documentation>
+		<Summary>关注</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfrRemark" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>备注</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfrAddDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>添加时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfrFriendStatus" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>好友状态</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfrOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfrOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FfrStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>状态</Summary>
+	</Documentation>
+</Property>
+          <NavigationProperty Name="FindFriendGroup" Relationship="BlueVacationModel.FK_FINDFRIE_RELATIONS_FINDFRIE" FromRole="FindFriends" ToRole="FindFriendGroup" />
+          <NavigationProperty Name="FindUsers" Relationship="BlueVacationModel.FK_FINDFRIE_USERS_FRI_FINDUSER" FromRole="FindFriends" ToRole="FindUsers" />
+        
+</EntityType>
+        <EntityType Name="FindGame">
+	 <Documentation>
+		<Summary>游戏</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FgId" />
+          </Key>
+	<Property Name="FgId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>游戏ID</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FgName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>名称</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FgType" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>类型</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FgDescribe" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>简介</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FgPersonCount" Type="Decimal" Precision="20" Scale="0" >
+	 <Documentation>
+		<Summary>人数</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FgPlayIntrodece" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>玩法介绍</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FgOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FgOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FgStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>状态</Summary>
+	</Documentation>
+</Property>
+          <NavigationProperty Name="FindGameRoom" Relationship="BlueVacationModel.FK_FINDGAME_GAME_GAME_FINDGAME" FromRole="FindGame" ToRole="FindGameRoom" />
+        
+</EntityType>
+        <EntityType Name="FindGameRoom">
+	 <Documentation>
+		<Summary>游戏房间</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FgrId" />
+          </Key>
+	<Property Name="FgrId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>房间ID</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuId" Type="Int32" >
+	 <Documentation>
+		<Summary>用户表Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FgId" Type="Int32" >
+	 <Documentation>
+		<Summary>游戏ID</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FgrName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>房间名称</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FgrNumber" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>编号</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FgrPersonCount" Type="Decimal" Precision="20" Scale="0" >
+	 <Documentation>
+		<Summary>房间人数</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FgrGameStatus" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>游戏状态</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FgrOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FgrOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FgrStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>状态</Summary>
+	</Documentation>
+</Property>
+          <NavigationProperty Name="FindGame" Relationship="BlueVacationModel.FK_FINDGAME_GAME_GAME_FINDGAME" FromRole="FindGameRoom" ToRole="FindGame" />
+          <NavigationProperty Name="FindUsers" Relationship="BlueVacationModel.FK_FINDGAME_USERS_GAM_FINDUSER" FromRole="FindGameRoom" ToRole="FindUsers" />
+        
+</EntityType>
+        <EntityType Name="FindHonor">
+	 <Documentation>
+		<Summary>荣誉表</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FhoId" />
+          </Key>
+	<Property Name="FhoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>荣誉品Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuId" Type="Int32" >
+	 <Documentation>
+		<Summary>用户表Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FhoName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>名称</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FhoValue" Type="Decimal" Precision="20" Scale="0" >
+	 <Documentation>
+		<Summary>数值</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FhoUnit" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>单位</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FhoDescribe" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>介绍</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FhoOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FhoOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FhoStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>状态</Summary>
+	</Documentation>
+</Property>
+          <NavigationProperty Name="FindUsers" Relationship="BlueVacationModel.FK_FINDHONO_USERS_HON_FINDUSER" FromRole="FindHonor" ToRole="FindUsers" />
+        
+</EntityType>
+        <EntityType Name="FindInterest">
+	 <Documentation>
+		<Summary>兴趣</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FiId" />
+          </Key>
+	<Property Name="FiId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>兴趣ID</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FiName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>兴趣名称</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FiIntroduce" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>介绍</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FiOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FiOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FiStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>状态</Summary>
+	</Documentation>
+</Property>
+        
+</EntityType>
+        <EntityType Name="FindMessage">
+	 <Documentation>
+		<Summary>聊天信息</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FmId" />
+          </Key>
+	<Property Name="FmId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>信息ID</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuId" Type="Int32" >
+	 <Documentation>
+		<Summary>用户表Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FmTitle" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>标题</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FmContent" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>内容</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FmReceives" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>接收人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FmType" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>类型</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FmSendDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>发送时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FmOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FmOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FmStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>状体</Summary>
+	</Documentation>
+</Property>
+          <NavigationProperty Name="FindUsers" Relationship="BlueVacationModel.FK_FINDMESS_USERS_MES_FINDUSER" FromRole="FindMessage" ToRole="FindUsers" />
+        
+</EntityType>
+        <EntityType Name="FindMoney">
+	 <Documentation>
+		<Summary>虚拟币</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FmoId" />
+          </Key>
+	<Property Name="FmoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>虚拟币ID</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuId" Type="Int32" >
+	 <Documentation>
+		<Summary>用户表Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FmoName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>名称</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FmoType" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>类型</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FmoAmount" Type="Decimal" Precision="18" Scale="0" >
+	 <Documentation>
+		<Summary>金额</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FmoRate" Type="Decimal" Precision="18" Scale="0" >
+	 <Documentation>
+		<Summary>兑换比率</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FmoDescribe" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>货币描述</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FmoUnit" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>单位</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FmoOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FmoOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FmoStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>状态</Summary>
+	</Documentation>
+</Property>
+          <NavigationProperty Name="FindUsers" Relationship="BlueVacationModel.FK_FINDMONE_USERS_MON_FINDUSER" FromRole="FindMoney" ToRole="FindUsers" />
+        
+</EntityType>
+        <EntityType Name="FindPower">
+	 <Documentation>
+		<Summary>权限</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FpoId" />
+          </Key>
+	<Property Name="FpoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>权限ID</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuId" Type="Int32" >
+	 <Documentation>
+		<Summary>用户表Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FpoName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>名称</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FpoDescribe" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>介绍</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FpoValue" Type="Decimal" Precision="20" Scale="0" >
+	 <Documentation>
+		<Summary>数值</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FpoOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FpoOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FpoStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>状态</Summary>
+	</Documentation>
+</Property>
+          <NavigationProperty Name="FindUsers" Relationship="BlueVacationModel.FK_FINDPOWE_USERS_POW_FINDUSER" FromRole="FindPower" ToRole="FindUsers" />
+        
+</EntityType>
+        <EntityType Name="FindProduct">
+	 <Documentation>
+		<Summary>产品</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FpId" />
+          </Key>
+	<Property Name="FpId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>产品ID</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FpName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>产品名称</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FpPrice" Type="Decimal" Precision="18" Scale="0" >
+	 <Documentation>
+		<Summary>产品价格</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FpDescribe" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>介绍</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FpPicture" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>图片</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FpCostPrice" Type="Decimal" Precision="18" Scale="0" >
+	 <Documentation>
+		<Summary>成本价</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FpStock" Type="Decimal" Precision="20" Scale="0" >
+	 <Documentation>
+		<Summary>库存</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FpOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FpOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FpStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>状态</Summary>
+	</Documentation>
+</Property>
+        
+</EntityType>
+        <EntityType Name="FindPublicMessage">
+	 <Documentation>
+		<Summary>公告管理</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FpmId" />
+          </Key>
+	<Property Name="FpmId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>公告ID</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuId" Type="Int32" >
+	 <Documentation>
+		<Summary>用户表Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FpmType" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>类型</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FpmBinding" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>绑定号</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FpmTitle" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>标题</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FpmConent" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>内容</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FpmPublishDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>发表时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FpmOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FpmOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FpmStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>状态</Summary>
+	</Documentation>
+</Property>
+          <NavigationProperty Name="FindUsers" Relationship="BlueVacationModel.FK_FINDPUBL_FINDUSERS_FINDUSER" FromRole="FindPublicMessage" ToRole="FindUsers" />
+        
+</EntityType>
+        <EntityType Name="FindRecharge">
+	 <Documentation>
+		<Summary>充值</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FrId" />
+          </Key>
+	<Property Name="FrId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>充值Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuId" Type="Int32" >
+	 <Documentation>
+		<Summary>用户表Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FrAmount" Type="Decimal" Precision="18" Scale="0" >
+	 <Documentation>
+		<Summary>充值金额</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FrRechargeDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>充值时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FrRechargeStatus" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>充值状态</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FrIntroduce" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>充值说明</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FrAuditor" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>审核人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FrAuditorDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>审核时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FrOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FrOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FrStatus" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>状态</Summary>
+	</Documentation>
+</Property>
+          <NavigationProperty Name="FindUsers" Relationship="BlueVacationModel.FK_FINDRECH_FINDUSERS_FINDUSER" FromRole="FindRecharge" ToRole="FindUsers" />
+        
+</EntityType>
+        <EntityType Name="FindTrendComments">
+	 <Documentation>
+		<Summary>动态评论</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FtcId" />
+          </Key>
+	<Property Name="FtcId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>评论ID</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FtrId" Type="Int32" >
+	 <Documentation>
+		<Summary>动态ID</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuId" Type="Int32" >
+	 <Documentation>
+		<Summary>用户表Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FtcAppendix" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>附件</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FtcPublishDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>发表时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FtcContent" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>内容</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FtcReadCounts" Type="Decimal" Precision="20" Scale="0" >
+	 <Documentation>
+		<Summary>阅读次数</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FtcLisks" Type="Decimal" Precision="20" Scale="0" >
+	 <Documentation>
+		<Summary>点赞</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FtcOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FtcOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FtcStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>状态</Summary>
+	</Documentation>
+</Property>
+          <NavigationProperty Name="FindTrends" Relationship="BlueVacationModel.FK_FINDTREN_TRENDS_TR_FINDTREN" FromRole="FindTrendComments" ToRole="FindTrends" />
+          <NavigationProperty Name="FindUsers" Relationship="BlueVacationModel.FK_FINDTREN_USERS_TRE_FINDUSER" FromRole="FindTrendComments" ToRole="FindUsers" />
+        
+</EntityType>
+        <EntityType Name="FindTrends">
+	 <Documentation>
+		<Summary>动态</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FtrId" />
+          </Key>
+	<Property Name="FtrId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>动态ID</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuId" Type="Int32" >
+	 <Documentation>
+		<Summary>用户表Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FtrTitle" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>标题</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FtrContent" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>内容</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FtrAppendix" Type="String" MaxLength="512" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>附件</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FtrPublishDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>发表时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FtrFrom" Type="String" MaxLength="512" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>来源</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FtrReadCount" Type="Decimal" Precision="20" Scale="0" >
+	 <Documentation>
+		<Summary>阅读次数</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FtrLinks" Type="Decimal" Precision="20" Scale="0" >
+	 <Documentation>
+		<Summary>点赞次数</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FtrOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FtrOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FtrStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>状态</Summary>
+	</Documentation>
+</Property>
+          <NavigationProperty Name="FindTrendComments" Relationship="BlueVacationModel.FK_FINDTREN_TRENDS_TR_FINDTREN" FromRole="FindTrends" ToRole="FindTrendComments" />
+          <NavigationProperty Name="FindUsers" Relationship="BlueVacationModel.FK_FINDTREN_RELATIONS_FINDUSER" FromRole="FindTrends" ToRole="FindUsers" />
+        
+</EntityType>
+        <EntityType Name="FindUsers">
+	 <Documentation>
+		<Summary>用户表</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FuId" />
+          </Key>
+	<Property Name="FuId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>用户表Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>用户名</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuRealName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>真实姓名</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuNickName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>昵称</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuSex" Type="String" MaxLength="64" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>性别</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuPassword" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>密码</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuAge" Type="Decimal" Precision="18" Scale="0" >
+	 <Documentation>
+		<Summary>年龄</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuAddress" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>地址</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuProvience" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>省</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuCity" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>市</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuCounty" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>县</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuEmail" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>邮箱</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuTeleph" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>电话</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuNationality" Type="String" MaxLength="64" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>国籍</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuNation" Type="String" MaxLength="64" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>民族</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuConstellation" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>星座</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuBloodType" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>血型</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuStature" Type="Decimal" Precision="18" Scale="0" >
+	 <Documentation>
+		<Summary>身高</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuWeight" Type="Decimal" Precision="18" Scale="0" >
+	 <Documentation>
+		<Summary>体重</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuHomepace" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>出生地</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuDateBirth" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>出生日期</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuVocation" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>职业</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuQq" Type="Decimal" Precision="30" Scale="0" >
+	 <Documentation>
+		<Summary>QQ</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuGraduateSchool" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>毕业院校</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuCurrentCompany" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>当前公司</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuSpecialSkill" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>特长</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuAccomplish" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>成就</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuEmpiricValue" Type="Decimal" Precision="18" Scale="0" >
+	 <Documentation>
+		<Summary>经验值</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuVipLevel" Type="Decimal" Precision="18" Scale="0" >
+	 <Documentation>
+		<Summary>会员等级</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuHeadSculpture1" Type="String" MaxLength="512" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>头像1</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuHeadSculpture2" Type="String" MaxLength="512" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>头像2</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuRegisterDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>注册日期</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>操作状态</Summary>
+	</Documentation>
+</Property>
+          <NavigationProperty Name="FindAccounts" Relationship="BlueVacationModel.FK_FINDACCO_FINDUSERS_FINDUSER" FromRole="FindUsers" ToRole="FindAccounts" />
+          <NavigationProperty Name="FindApply" Relationship="BlueVacationModel.FK_FINDAPPL_USERS_APP_FINDUSER" FromRole="FindUsers" ToRole="FindApply" />
+          <NavigationProperty Name="FindBackList" Relationship="BlueVacationModel.FK_FINDBACK_USERS_BAC_FINDUSER" FromRole="FindUsers" ToRole="FindBackList" />
+          <NavigationProperty Name="FindCircle" Relationship="BlueVacationModel.FK_FINDCIRC_FINDUSERS_FINDUSER" FromRole="FindUsers" ToRole="FindCircle" />
+          <NavigationProperty Name="FindDevice" Relationship="BlueVacationModel.FK_FINDDEVI_USERS_DEV_FINDUSER" FromRole="FindUsers" ToRole="FindDevice" />
+          <NavigationProperty Name="FindDocument" Relationship="BlueVacationModel.FK_FINDDOCU_USERS_DOC_FINDUSER" FromRole="FindUsers" ToRole="FindDocument" />
+          <NavigationProperty Name="FindFlow" Relationship="BlueVacationModel.FK_FINDFLOW_FINDUSERS_FINDUSER" FromRole="FindUsers" ToRole="FindFlow" />
+          <NavigationProperty Name="FindFriendGroup" Relationship="BlueVacationModel.FK_FINDFRIE_RELATIONS_FINDUSER" FromRole="FindUsers" ToRole="FindFriendGroup" />
+          <NavigationProperty Name="FindFriends" Relationship="BlueVacationModel.FK_FINDFRIE_USERS_FRI_FINDUSER" FromRole="FindUsers" ToRole="FindFriends" />
+          <NavigationProperty Name="FindGameRoom" Relationship="BlueVacationModel.FK_FINDGAME_USERS_GAM_FINDUSER" FromRole="FindUsers" ToRole="FindGameRoom" />
+          <NavigationProperty Name="FindHonor" Relationship="BlueVacationModel.FK_FINDHONO_USERS_HON_FINDUSER" FromRole="FindUsers" ToRole="FindHonor" />
+          <NavigationProperty Name="FindMessage" Relationship="BlueVacationModel.FK_FINDMESS_USERS_MES_FINDUSER" FromRole="FindUsers" ToRole="FindMessage" />
+          <NavigationProperty Name="FindMoney" Relationship="BlueVacationModel.FK_FINDMONE_USERS_MON_FINDUSER" FromRole="FindUsers" ToRole="FindMoney" />
+          <NavigationProperty Name="FindPower" Relationship="BlueVacationModel.FK_FINDPOWE_USERS_POW_FINDUSER" FromRole="FindUsers" ToRole="FindPower" />
+          <NavigationProperty Name="FindPublicMessage" Relationship="BlueVacationModel.FK_FINDPUBL_FINDUSERS_FINDUSER" FromRole="FindUsers" ToRole="FindPublicMessage" />
+          <NavigationProperty Name="FindRecharge" Relationship="BlueVacationModel.FK_FINDRECH_FINDUSERS_FINDUSER" FromRole="FindUsers" ToRole="FindRecharge" />
+          <NavigationProperty Name="FindTrendComments" Relationship="BlueVacationModel.FK_FINDTREN_USERS_TRE_FINDUSER" FromRole="FindUsers" ToRole="FindTrendComments" />
+          <NavigationProperty Name="FindTrends" Relationship="BlueVacationModel.FK_FINDTREN_RELATIONS_FINDUSER" FromRole="FindUsers" ToRole="FindTrends" />
+          <NavigationProperty Name="FindVerify" Relationship="BlueVacationModel.FK_FINDVERI_USER_VERI_FINDUSER" FromRole="FindUsers" ToRole="FindVerify" />
+          <NavigationProperty Name="FindWithDrawCash" Relationship="BlueVacationModel.FK_FINDWITH_USERS_WIT_FINDUSER" FromRole="FindUsers" ToRole="FindWithDrawCash" />
+        
+</EntityType>
+        <EntityType Name="FindVerify">
+	 <Documentation>
+		<Summary>验证表</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FveId" />
+          </Key>
+	<Property Name="FveId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>验证id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuId" Type="Int32" >
+	 <Documentation>
+		<Summary>用户表Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FveType" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>验证类型</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FveQuestion" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>问题</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FveAnswer" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>答案</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FveFor" Type="String" MaxLength="512" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>验证对象</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FveVerifyStatus" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>验证状态</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FveOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FveOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FveStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>状态</Summary>
+	</Documentation>
+</Property>
+          <NavigationProperty Name="FindUsers" Relationship="BlueVacationModel.FK_FINDVERI_USER_VERI_FINDUSER" FromRole="FindVerify" ToRole="FindUsers" />
+        
+</EntityType>
+        <EntityType Name="FindWithDrawCash">
+	 <Documentation>
+		<Summary>提现</Summary>
+	</Documentation>
+	<Key>
+            <PropertyRef Name="FwcId" />
+          </Key>
+	<Property Name="FwcId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+	 <Documentation>
+		<Summary>提现ID</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FuId" Type="Int32" >
+	 <Documentation>
+		<Summary>用户表Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FaId" Type="Int32" >
+	 <Documentation>
+		<Summary>账户表Id</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FwcAmount" Type="Decimal" Precision="18" Scale="0" >
+	 <Documentation>
+		<Summary>提现金额</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FwcWithDrawDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>提现时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FwcWithDrawStatus" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>提现状态</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FwcWithDrawIntroduce" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>提现说明</Summary>
+	</Documentation>
+</Property>
+	<Property Name="Fwc" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>审核人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FwcAuditDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>审核时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FwcOperator" Type="String" MaxLength="256" FixedLength="false" Unicode="false" >
+	 <Documentation>
+		<Summary>操作人</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FwcOperateDate" Type="DateTime" Precision="3" >
+	 <Documentation>
+		<Summary>操作时间</Summary>
+	</Documentation>
+</Property>
+	<Property Name="FwcStatus" Type="Boolean" >
+	 <Documentation>
+		<Summary>状态</Summary>
+	</Documentation>
+</Property>
+          <NavigationProperty Name="FindAccounts" Relationship="BlueVacationModel.FK_FINDWITH_ACCOUNTS__FINDACCO" FromRole="FindWithDrawCash" ToRole="FindAccounts" />
+          <NavigationProperty Name="FindUsers" Relationship="BlueVacationModel.FK_FINDWITH_USERS_WIT_FINDUSER" FromRole="FindWithDrawCash" ToRole="FindUsers" />
+        
+</EntityType>
+        <Association Name="FK_FINDACCO_FINDUSERS_FINDUSER">
+          <End Type="BlueVacationModel.FindUsers" Role="FindUsers" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindAccounts" Role="FindAccounts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindAccounts">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDWITH_ACCOUNTS__FINDACCO">
+          <End Type="BlueVacationModel.FindAccounts" Role="FindAccounts" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindWithDrawCash" Role="FindWithDrawCash" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindAccounts">
+              <PropertyRef Name="FaId" />
+            </Principal>
+            <Dependent Role="FindWithDrawCash">
+              <PropertyRef Name="FaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDADVE_ALIMAM_AD_FINDALIM">
+          <End Type="BlueVacationModel.FindAlimama" Role="FindAlimama" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindAdversitement" Role="FindAdversitement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindAlimama">
+              <PropertyRef Name="FalId" />
+            </Principal>
+            <Dependent Role="FindAdversitement">
+              <PropertyRef Name="FalId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDAPPL_USERS_APP_FINDUSER">
+          <End Type="BlueVacationModel.FindUsers" Role="FindUsers" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindApply" Role="FindApply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindApply">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDBACK_USERS_BAC_FINDUSER">
+          <End Type="BlueVacationModel.FindUsers" Role="FindUsers" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindBackList" Role="FindBackList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindBackList">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDCIRC_FINDUSERS_FINDUSER">
+          <End Type="BlueVacationModel.FindUsers" Role="FindUsers" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindCircle" Role="FindCircle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindCircle">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDDEVI_USERS_DEV_FINDUSER">
+          <End Type="BlueVacationModel.FindUsers" Role="FindUsers" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindDevice" Role="FindDevice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindDevice">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDDOCU_USERS_DOC_FINDUSER">
+          <End Type="BlueVacationModel.FindUsers" Role="FindUsers" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindDocument" Role="FindDocument" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindDocument">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDFLOW_FINDUSERS_FINDUSER">
+          <End Type="BlueVacationModel.FindUsers" Role="FindUsers" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindFlow" Role="FindFlow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindFlow">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDFRIE_RELATIONS_FINDFRIE">
+          <End Type="BlueVacationModel.FindFriendGroup" Role="FindFriendGroup" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindFriends" Role="FindFriends" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindFriendGroup">
+              <PropertyRef Name="FfgId" />
+            </Principal>
+            <Dependent Role="FindFriends">
+              <PropertyRef Name="FfgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDFRIE_RELATIONS_FINDUSER">
+          <End Type="BlueVacationModel.FindUsers" Role="FindUsers" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindFriendGroup" Role="FindFriendGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindFriendGroup">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDFRIE_USERS_FRI_FINDUSER">
+          <End Type="BlueVacationModel.FindUsers" Role="FindUsers" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindFriends" Role="FindFriends" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindFriends">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDGAME_GAME_GAME_FINDGAME">
+          <End Type="BlueVacationModel.FindGame" Role="FindGame" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindGameRoom" Role="FindGameRoom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindGame">
+              <PropertyRef Name="FgId" />
+            </Principal>
+            <Dependent Role="FindGameRoom">
+              <PropertyRef Name="FgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDGAME_USERS_GAM_FINDUSER">
+          <End Type="BlueVacationModel.FindUsers" Role="FindUsers" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindGameRoom" Role="FindGameRoom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindGameRoom">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDHONO_USERS_HON_FINDUSER">
+          <End Type="BlueVacationModel.FindUsers" Role="FindUsers" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindHonor" Role="FindHonor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindHonor">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDMESS_USERS_MES_FINDUSER">
+          <End Type="BlueVacationModel.FindUsers" Role="FindUsers" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindMessage" Role="FindMessage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindMessage">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDMONE_USERS_MON_FINDUSER">
+          <End Type="BlueVacationModel.FindUsers" Role="FindUsers" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindMoney" Role="FindMoney" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindMoney">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDPOWE_USERS_POW_FINDUSER">
+          <End Type="BlueVacationModel.FindUsers" Role="FindUsers" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindPower" Role="FindPower" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindPower">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDPUBL_FINDUSERS_FINDUSER">
+          <End Type="BlueVacationModel.FindUsers" Role="FindUsers" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindPublicMessage" Role="FindPublicMessage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindPublicMessage">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDRECH_FINDUSERS_FINDUSER">
+          <End Type="BlueVacationModel.FindUsers" Role="FindUsers" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindRecharge" Role="FindRecharge" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindRecharge">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDTREN_TRENDS_TR_FINDTREN">
+          <End Type="BlueVacationModel.FindTrends" Role="FindTrends" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindTrendComments" Role="FindTrendComments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindTrends">
+              <PropertyRef Name="FtrId" />
+            </Principal>
+            <Dependent Role="FindTrendComments">
+              <PropertyRef Name="FtrId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDTREN_USERS_TRE_FINDUSER">
+          <End Type="BlueVacationModel.FindUsers" Role="FindUsers" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindTrendComments" Role="FindTrendComments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindTrendComments">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDTREN_RELATIONS_FINDUSER">
+          <End Type="BlueVacationModel.FindUsers" Role="FindUsers" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindTrends" Role="FindTrends" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindTrends">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDVERI_USER_VERI_FINDUSER">
+          <End Type="BlueVacationModel.FindUsers" Role="FindUsers" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindVerify" Role="FindVerify" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindVerify">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FINDWITH_USERS_WIT_FINDUSER">
+          <End Type="BlueVacationModel.FindUsers" Role="FindUsers" Multiplicity="0..1" />
+          <End Type="BlueVacationModel.FindWithDrawCash" Role="FindWithDrawCash" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FindUsers">
+              <PropertyRef Name="FuId" />
+            </Principal>
+            <Dependent Role="FindWithDrawCash">
+              <PropertyRef Name="FuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BlueVacationModelStoreContainer" CdmEntityContainer="BlueVacationEntities">
+          <EntitySetMapping Name="FindAccounts">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindAccounts">
+              <MappingFragment StoreEntitySet="FindAccounts">
+                <ScalarProperty Name="FaStatus" ColumnName="FaStatus" />
+                <ScalarProperty Name="FaOperateDate" ColumnName="FaOperateDate" />
+                <ScalarProperty Name="FaOperator" ColumnName="FaOperator" />
+                <ScalarProperty Name="FaNumber" ColumnName="FaNumber" />
+                <ScalarProperty Name="FaBalance" ColumnName="FaBalance" />
+                <ScalarProperty Name="FaName" ColumnName="FaName" />
+                <ScalarProperty Name="FuId" ColumnName="FuId" />
+                <ScalarProperty Name="FaId" ColumnName="FaId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindAdversitement">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindAdversitement">
+              <MappingFragment StoreEntitySet="FindAdversitement">
+                <ScalarProperty Name="FadStatus" ColumnName="FadStatus" />
+                <ScalarProperty Name="FadOperateDate" ColumnName="FadOperateDate" />
+                <ScalarProperty Name="FadOperator" ColumnName="FadOperator" />
+                <ScalarProperty Name="FadAdStatus" ColumnName="FadAdStatus" />
+                <ScalarProperty Name="FadPrice" ColumnName="FadPrice" />
+                <ScalarProperty Name="FadFeeScale" ColumnName="FadFeeScale" />
+                <ScalarProperty Name="FadCompany" ColumnName="FadCompany" />
+                <ScalarProperty Name="FadOutDate" ColumnName="FadOutDate" />
+                <ScalarProperty Name="FadPubDate" ColumnName="FadPubDate" />
+                <ScalarProperty Name="FadContnet" ColumnName="FadContnet" />
+                <ScalarProperty Name="FadTitle" ColumnName="FadTitle" />
+                <ScalarProperty Name="FadName" ColumnName="FadName" />
+                <ScalarProperty Name="FalId" ColumnName="FalId" />
+                <ScalarProperty Name="FadId" ColumnName="FadId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindAlimama">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindAlimama">
+              <MappingFragment StoreEntitySet="FindAlimama">
+                <ScalarProperty Name="FalStatus" ColumnName="FalStatus" />
+                <ScalarProperty Name="FalOperateDate" ColumnName="FalOperateDate" />
+                <ScalarProperty Name="FalOperator" ColumnName="FalOperator" />
+                <ScalarProperty Name="FalAdStatus" ColumnName="FalAdStatus" />
+                <ScalarProperty Name="FalWidth" ColumnName="FalWidth" />
+                <ScalarProperty Name="FalLength" ColumnName="FalLength" />
+                <ScalarProperty Name="FalName" ColumnName="FalName" />
+                <ScalarProperty Name="FalId" ColumnName="FalId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindApply">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindApply">
+              <MappingFragment StoreEntitySet="FindApply">
+                <ScalarProperty Name="FapStatus" ColumnName="FapStatus" />
+                <ScalarProperty Name="FapOperateDate" ColumnName="FapOperateDate" />
+                <ScalarProperty Name="FapOperator" ColumnName="FapOperator" />
+                <ScalarProperty Name="FapApplyStatus" ColumnName="FapApplyStatus" />
+                <ScalarProperty Name="FapApplyDescribe" ColumnName="FapApplyDescribe" />
+                <ScalarProperty Name="FapApplyDate" ColumnName="FapApplyDate" />
+                <ScalarProperty Name="FapFor" ColumnName="FapFor" />
+                <ScalarProperty Name="FapType" ColumnName="FapType" />
+                <ScalarProperty Name="FuId" ColumnName="FuId" />
+                <ScalarProperty Name="FapId" ColumnName="FapId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindBackList">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindBackList">
+              <MappingFragment StoreEntitySet="FindBackList">
+                <ScalarProperty Name="DbStatus" ColumnName="DbStatus" />
+                <ScalarProperty Name="DbOperateDate" ColumnName="DbOperateDate" />
+                <ScalarProperty Name="DbOperator" ColumnName="DbOperator" />
+                <ScalarProperty Name="FbAddDate" ColumnName="FbAddDate" />
+                <ScalarProperty Name="FbBackId" ColumnName="FbBackId" />
+                <ScalarProperty Name="FuId" ColumnName="FuId" />
+                <ScalarProperty Name="FbId" ColumnName="FbId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindCircle">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindCircle">
+              <MappingFragment StoreEntitySet="FindCircle">
+                <ScalarProperty Name="FcStatus" ColumnName="FcStatus" />
+                <ScalarProperty Name="FcOperateDate" ColumnName="FcOperateDate" />
+                <ScalarProperty Name="FcOperator" ColumnName="FcOperator" />
+                <ScalarProperty Name="FcCreateDate" ColumnName="FcCreateDate" />
+                <ScalarProperty Name="FcIcon" ColumnName="FcIcon" />
+                <ScalarProperty Name="FcLevel" ColumnName="FcLevel" />
+                <ScalarProperty Name="FcType" ColumnName="FcType" />
+                <ScalarProperty Name="FcIntroduce" ColumnName="FcIntroduce" />
+                <ScalarProperty Name="FcName" ColumnName="FcName" />
+                <ScalarProperty Name="FuId" ColumnName="FuId" />
+                <ScalarProperty Name="FcId" ColumnName="FcId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindDevice">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindDevice">
+              <MappingFragment StoreEntitySet="FindDevice">
+                <ScalarProperty Name="FdeStatus" ColumnName="FdeStatus" />
+                <ScalarProperty Name="FdeOperateDate" ColumnName="FdeOperateDate" />
+                <ScalarProperty Name="FdeOperator" ColumnName="FdeOperator" />
+                <ScalarProperty Name="FdeDescriabe" ColumnName="FdeDescriabe" />
+                <ScalarProperty Name="FdeFunction" ColumnName="FdeFunction" />
+                <ScalarProperty Name="FdeName" ColumnName="FdeName" />
+                <ScalarProperty Name="FuId" ColumnName="FuId" />
+                <ScalarProperty Name="FdeId" ColumnName="FdeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindDictionary">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindDictionary">
+              <MappingFragment StoreEntitySet="FindDictionary">
+                <ScalarProperty Name="FdStatus" ColumnName="FdStatus" />
+                <ScalarProperty Name="FdOperateDate" ColumnName="FdOperateDate" />
+                <ScalarProperty Name="FdOperator" ColumnName="FdOperator" />
+                <ScalarProperty Name="FdDictionaryStatus" ColumnName="FdDictionaryStatus" />
+                <ScalarProperty Name="FdParentId" ColumnName="FdParentId" />
+                <ScalarProperty Name="FdRemark" ColumnName="FdRemark" />
+                <ScalarProperty Name="FdValue" ColumnName="FdValue" />
+                <ScalarProperty Name="FdName" ColumnName="FdName" />
+                <ScalarProperty Name="FdType" ColumnName="FdType" />
+                <ScalarProperty Name="FdId" ColumnName="FdId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindDocument">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindDocument">
+              <MappingFragment StoreEntitySet="FindDocument">
+                <ScalarProperty Name="FdoStatus" ColumnName="FdoStatus" />
+                <ScalarProperty Name="FdoOperateDate" ColumnName="FdoOperateDate" />
+                <ScalarProperty Name="FdoOperator" ColumnName="FdoOperator" />
+                <ScalarProperty Name="FdoUrl" ColumnName="FdoUrl" />
+                <ScalarProperty Name="FdoUseFor" ColumnName="FdoUseFor" />
+                <ScalarProperty Name="FdoType" ColumnName="FdoType" />
+                <ScalarProperty Name="FdoName" ColumnName="FdoName" />
+                <ScalarProperty Name="FuId" ColumnName="FuId" />
+                <ScalarProperty Name="FdoId" ColumnName="FdoId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindFlow">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindFlow">
+              <MappingFragment StoreEntitySet="FindFlow">
+                <ScalarProperty Name="FfStatus" ColumnName="FfStatus" />
+                <ScalarProperty Name="FfOperateDate" ColumnName="FfOperateDate" />
+                <ScalarProperty Name="FfOperator" ColumnName="FfOperator" />
+                <ScalarProperty Name="FfExchangeStatus" ColumnName="FfExchangeStatus" />
+                <ScalarProperty Name="FfAutidingDate" ColumnName="FfAutidingDate" />
+                <ScalarProperty Name="FfBindNumber" ColumnName="FfBindNumber" />
+                <ScalarProperty Name="FfAmountReceived" ColumnName="FfAmountReceived" />
+                <ScalarProperty Name="FfAmountPaid" ColumnName="FfAmountPaid" />
+                <ScalarProperty Name="FfDetails" ColumnName="FfDetails" />
+                <ScalarProperty Name="FfType" ColumnName="FfType" />
+                <ScalarProperty Name="FfDate" ColumnName="FfDate" />
+                <ScalarProperty Name="FfNumber" ColumnName="FfNumber" />
+                <ScalarProperty Name="FuId" ColumnName="FuId" />
+                <ScalarProperty Name="FfId" ColumnName="FfId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindFriendGroup">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindFriendGroup">
+              <MappingFragment StoreEntitySet="FindFriendGroup">
+                <ScalarProperty Name="FfgStatus" ColumnName="FfgStatus" />
+                <ScalarProperty Name="FfgOperateDate" ColumnName="FfgOperateDate" />
+                <ScalarProperty Name="FfgOperator" ColumnName="FfgOperator" />
+                <ScalarProperty Name="FfgDescribe" ColumnName="FfgDescribe" />
+                <ScalarProperty Name="FfgName" ColumnName="FfgName" />
+                <ScalarProperty Name="FuId" ColumnName="FuId" />
+                <ScalarProperty Name="FfgId" ColumnName="FfgId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindFriends">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindFriends">
+              <MappingFragment StoreEntitySet="FindFriends">
+                <ScalarProperty Name="FfrStatus" ColumnName="FfrStatus" />
+                <ScalarProperty Name="FfrOperateDate" ColumnName="FfrOperateDate" />
+                <ScalarProperty Name="FfrOperator" ColumnName="FfrOperator" />
+                <ScalarProperty Name="FfrFriendStatus" ColumnName="FfrFriendStatus" />
+                <ScalarProperty Name="FfrAddDate" ColumnName="FfrAddDate" />
+                <ScalarProperty Name="FfrRemark" ColumnName="FfrRemark" />
+                <ScalarProperty Name="FfrInterest" ColumnName="FfrInterest" />
+                <ScalarProperty Name="FfrFriendsId" ColumnName="FfrFriendsId" />
+                <ScalarProperty Name="FfgId" ColumnName="FfgId" />
+                <ScalarProperty Name="FuId" ColumnName="FuId" />
+                <ScalarProperty Name="FfrId" ColumnName="FfrId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindGame">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindGame">
+              <MappingFragment StoreEntitySet="FindGame">
+                <ScalarProperty Name="FgStatus" ColumnName="FgStatus" />
+                <ScalarProperty Name="FgOperateDate" ColumnName="FgOperateDate" />
+                <ScalarProperty Name="FgOperator" ColumnName="FgOperator" />
+                <ScalarProperty Name="FgPlayIntrodece" ColumnName="FgPlayIntrodece" />
+                <ScalarProperty Name="FgPersonCount" ColumnName="FgPersonCount" />
+                <ScalarProperty Name="FgDescribe" ColumnName="FgDescribe" />
+                <ScalarProperty Name="FgType" ColumnName="FgType" />
+                <ScalarProperty Name="FgName" ColumnName="FgName" />
+                <ScalarProperty Name="FgId" ColumnName="FgId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindGameRoom">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindGameRoom">
+              <MappingFragment StoreEntitySet="FindGameRoom">
+                <ScalarProperty Name="FgrStatus" ColumnName="FgrStatus" />
+                <ScalarProperty Name="FgrOperateDate" ColumnName="FgrOperateDate" />
+                <ScalarProperty Name="FgrOperator" ColumnName="FgrOperator" />
+                <ScalarProperty Name="FgrGameStatus" ColumnName="FgrGameStatus" />
+                <ScalarProperty Name="FgrPersonCount" ColumnName="FgrPersonCount" />
+                <ScalarProperty Name="FgrNumber" ColumnName="FgrNumber" />
+                <ScalarProperty Name="FgrName" ColumnName="FgrName" />
+                <ScalarProperty Name="FgId" ColumnName="FgId" />
+                <ScalarProperty Name="FuId" ColumnName="FuId" />
+                <ScalarProperty Name="FgrId" ColumnName="FgrId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindHonor">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindHonor">
+              <MappingFragment StoreEntitySet="FindHonor">
+                <ScalarProperty Name="FhoStatus" ColumnName="FhoStatus" />
+                <ScalarProperty Name="FhoOperateDate" ColumnName="FhoOperateDate" />
+                <ScalarProperty Name="FhoOperator" ColumnName="FhoOperator" />
+                <ScalarProperty Name="FhoDescribe" ColumnName="FhoDescribe" />
+                <ScalarProperty Name="FhoUnit" ColumnName="FhoUnit" />
+                <ScalarProperty Name="FhoValue" ColumnName="FhoValue" />
+                <ScalarProperty Name="FhoName" ColumnName="FhoName" />
+                <ScalarProperty Name="FuId" ColumnName="FuId" />
+                <ScalarProperty Name="FhoId" ColumnName="FhoId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindInterest">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindInterest">
+              <MappingFragment StoreEntitySet="FindInterest">
+                <ScalarProperty Name="FiStatus" ColumnName="FiStatus" />
+                <ScalarProperty Name="FiOperateDate" ColumnName="FiOperateDate" />
+                <ScalarProperty Name="FiOperator" ColumnName="FiOperator" />
+                <ScalarProperty Name="FiIntroduce" ColumnName="FiIntroduce" />
+                <ScalarProperty Name="FiName" ColumnName="FiName" />
+                <ScalarProperty Name="FiId" ColumnName="FiId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindMessage">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindMessage">
+              <MappingFragment StoreEntitySet="FindMessage">
+                <ScalarProperty Name="FmStatus" ColumnName="FmStatus" />
+                <ScalarProperty Name="FmOperateDate" ColumnName="FmOperateDate" />
+                <ScalarProperty Name="FmOperator" ColumnName="FmOperator" />
+                <ScalarProperty Name="FmSendDate" ColumnName="FmSendDate" />
+                <ScalarProperty Name="FmType" ColumnName="FmType" />
+                <ScalarProperty Name="FmReceives" ColumnName="FmReceives" />
+                <ScalarProperty Name="FmContent" ColumnName="FmContent" />
+                <ScalarProperty Name="FmTitle" ColumnName="FmTitle" />
+                <ScalarProperty Name="FuId" ColumnName="FuId" />
+                <ScalarProperty Name="FmId" ColumnName="FmId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindMoney">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindMoney">
+              <MappingFragment StoreEntitySet="FindMoney">
+                <ScalarProperty Name="FmoStatus" ColumnName="FmoStatus" />
+                <ScalarProperty Name="FmoOperateDate" ColumnName="FmoOperateDate" />
+                <ScalarProperty Name="FmoOperator" ColumnName="FmoOperator" />
+                <ScalarProperty Name="FmoUnit" ColumnName="FmoUnit" />
+                <ScalarProperty Name="FmoDescribe" ColumnName="FmoDescribe" />
+                <ScalarProperty Name="FmoRate" ColumnName="FmoRate" />
+                <ScalarProperty Name="FmoAmount" ColumnName="FmoAmount" />
+                <ScalarProperty Name="FmoType" ColumnName="FmoType" />
+                <ScalarProperty Name="FmoName" ColumnName="FmoName" />
+                <ScalarProperty Name="FuId" ColumnName="FuId" />
+                <ScalarProperty Name="FmoId" ColumnName="FmoId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindPower">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindPower">
+              <MappingFragment StoreEntitySet="FindPower">
+                <ScalarProperty Name="FpoStatus" ColumnName="FpoStatus" />
+                <ScalarProperty Name="FpoOperateDate" ColumnName="FpoOperateDate" />
+                <ScalarProperty Name="FpoOperator" ColumnName="FpoOperator" />
+                <ScalarProperty Name="FpoValue" ColumnName="FpoValue" />
+                <ScalarProperty Name="FpoDescribe" ColumnName="FpoDescribe" />
+                <ScalarProperty Name="FpoName" ColumnName="FpoName" />
+                <ScalarProperty Name="FuId" ColumnName="FuId" />
+                <ScalarProperty Name="FpoId" ColumnName="FpoId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindProduct">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindProduct">
+              <MappingFragment StoreEntitySet="FindProduct">
+                <ScalarProperty Name="FpStatus" ColumnName="FpStatus" />
+                <ScalarProperty Name="FpOperateDate" ColumnName="FpOperateDate" />
+                <ScalarProperty Name="FpOperator" ColumnName="FpOperator" />
+                <ScalarProperty Name="FpStock" ColumnName="FpStock" />
+                <ScalarProperty Name="FpCostPrice" ColumnName="FpCostPrice" />
+                <ScalarProperty Name="FpPicture" ColumnName="FpPicture" />
+                <ScalarProperty Name="FpDescribe" ColumnName="FpDescribe" />
+                <ScalarProperty Name="FpPrice" ColumnName="FpPrice" />
+                <ScalarProperty Name="FpName" ColumnName="FpName" />
+                <ScalarProperty Name="FpId" ColumnName="FpId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindPublicMessage">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindPublicMessage">
+              <MappingFragment StoreEntitySet="FindPublicMessage">
+                <ScalarProperty Name="FpmStatus" ColumnName="FpmStatus" />
+                <ScalarProperty Name="FpmOperateDate" ColumnName="FpmOperateDate" />
+                <ScalarProperty Name="FpmOperator" ColumnName="FpmOperator" />
+                <ScalarProperty Name="FpmPublishDate" ColumnName="FpmPublishDate" />
+                <ScalarProperty Name="FpmConent" ColumnName="FpmConent" />
+                <ScalarProperty Name="FpmTitle" ColumnName="FpmTitle" />
+                <ScalarProperty Name="FpmBinding" ColumnName="FpmBinding" />
+                <ScalarProperty Name="FpmType" ColumnName="FpmType" />
+                <ScalarProperty Name="FuId" ColumnName="FuId" />
+                <ScalarProperty Name="FpmId" ColumnName="FpmId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindRecharge">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindRecharge">
+              <MappingFragment StoreEntitySet="FindRecharge">
+                <ScalarProperty Name="FrStatus" ColumnName="FrStatus" />
+                <ScalarProperty Name="FrOperateDate" ColumnName="FrOperateDate" />
+                <ScalarProperty Name="FrOperator" ColumnName="FrOperator" />
+                <ScalarProperty Name="FrAuditorDate" ColumnName="FrAuditorDate" />
+                <ScalarProperty Name="FrAuditor" ColumnName="FrAuditor" />
+                <ScalarProperty Name="FrIntroduce" ColumnName="FrIntroduce" />
+                <ScalarProperty Name="FrRechargeStatus" ColumnName="FrRechargeStatus" />
+                <ScalarProperty Name="FrRechargeDate" ColumnName="FrRechargeDate" />
+                <ScalarProperty Name="FrAmount" ColumnName="FrAmount" />
+                <ScalarProperty Name="FuId" ColumnName="FuId" />
+                <ScalarProperty Name="FrId" ColumnName="FrId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindTrendComments">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindTrendComments">
+              <MappingFragment StoreEntitySet="FindTrendComments">
+                <ScalarProperty Name="FtcStatus" ColumnName="FtcStatus" />
+                <ScalarProperty Name="FtcOperateDate" ColumnName="FtcOperateDate" />
+                <ScalarProperty Name="FtcOperator" ColumnName="FtcOperator" />
+                <ScalarProperty Name="FtcLisks" ColumnName="FtcLisks" />
+                <ScalarProperty Name="FtcReadCounts" ColumnName="FtcReadCounts" />
+                <ScalarProperty Name="FtcContent" ColumnName="FtcContent" />
+                <ScalarProperty Name="FtcPublishDate" ColumnName="FtcPublishDate" />
+                <ScalarProperty Name="FtcAppendix" ColumnName="FtcAppendix" />
+                <ScalarProperty Name="FuId" ColumnName="FuId" />
+                <ScalarProperty Name="FtrId" ColumnName="FtrId" />
+                <ScalarProperty Name="FtcId" ColumnName="FtcId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindTrends">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindTrends">
+              <MappingFragment StoreEntitySet="FindTrends">
+                <ScalarProperty Name="FtrStatus" ColumnName="FtrStatus" />
+                <ScalarProperty Name="FtrOperateDate" ColumnName="FtrOperateDate" />
+                <ScalarProperty Name="FtrOperator" ColumnName="FtrOperator" />
+                <ScalarProperty Name="FtrLinks" ColumnName="FtrLinks" />
+                <ScalarProperty Name="FtrReadCount" ColumnName="FtrReadCount" />
+                <ScalarProperty Name="FtrFrom" ColumnName="FtrFrom" />
+                <ScalarProperty Name="FtrPublishDate" ColumnName="FtrPublishDate" />
+                <ScalarProperty Name="FtrAppendix" ColumnName="FtrAppendix" />
+                <ScalarProperty Name="FtrContent" ColumnName="FtrContent" />
+                <ScalarProperty Name="FtrTitle" ColumnName="FtrTitle" />
+                <ScalarProperty Name="FuId" ColumnName="FuId" />
+                <ScalarProperty Name="FtrId" ColumnName="FtrId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindUsers">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindUsers">
+              <MappingFragment StoreEntitySet="FindUsers">
+                <ScalarProperty Name="FuStatus" ColumnName="FuStatus" />
+                <ScalarProperty Name="FuOperateDate" ColumnName="FuOperateDate" />
+                <ScalarProperty Name="FuOperator" ColumnName="FuOperator" />
+                <ScalarProperty Name="FuRegisterDate" ColumnName="FuRegisterDate" />
+                <ScalarProperty Name="FuHeadSculpture2" ColumnName="FuHeadSculpture2" />
+                <ScalarProperty Name="FuHeadSculpture1" ColumnName="FuHeadSculpture1" />
+                <ScalarProperty Name="FuVipLevel" ColumnName="FuVipLevel" />
+                <ScalarProperty Name="FuEmpiricValue" ColumnName="FuEmpiricValue" />
+                <ScalarProperty Name="FuAccomplish" ColumnName="FuAccomplish" />
+                <ScalarProperty Name="FuSpecialSkill" ColumnName="FuSpecialSkill" />
+                <ScalarProperty Name="FuCurrentCompany" ColumnName="FuCurrentCompany" />
+                <ScalarProperty Name="FuGraduateSchool" ColumnName="FuGraduateSchool" />
+                <ScalarProperty Name="FuQq" ColumnName="FuQq" />
+                <ScalarProperty Name="FuVocation" ColumnName="FuVocation" />
+                <ScalarProperty Name="FuDateBirth" ColumnName="FuDateBirth" />
+                <ScalarProperty Name="FuHomepace" ColumnName="FuHomepace" />
+                <ScalarProperty Name="FuWeight" ColumnName="FuWeight" />
+                <ScalarProperty Name="FuStature" ColumnName="FuStature" />
+                <ScalarProperty Name="FuBloodType" ColumnName="FuBloodType" />
+                <ScalarProperty Name="FuConstellation" ColumnName="FuConstellation" />
+                <ScalarProperty Name="FuNation" ColumnName="FuNation" />
+                <ScalarProperty Name="FuNationality" ColumnName="FuNationality" />
+                <ScalarProperty Name="FuTeleph" ColumnName="FuTeleph" />
+                <ScalarProperty Name="FuEmail" ColumnName="FuEmail" />
+                <ScalarProperty Name="FuCounty" ColumnName="FuCounty" />
+                <ScalarProperty Name="FuCity" ColumnName="FuCity" />
+                <ScalarProperty Name="FuProvience" ColumnName="FuProvience" />
+                <ScalarProperty Name="FuAddress" ColumnName="FuAddress" />
+                <ScalarProperty Name="FuAge" ColumnName="FuAge" />
+                <ScalarProperty Name="FuPassword" ColumnName="FuPassword" />
+                <ScalarProperty Name="FuSex" ColumnName="FuSex" />
+                <ScalarProperty Name="FuNickName" ColumnName="FuNickName" />
+                <ScalarProperty Name="FuRealName" ColumnName="FuRealName" />
+                <ScalarProperty Name="FuName" ColumnName="FuName" />
+                <ScalarProperty Name="FuId" ColumnName="FuId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindVerify">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindVerify">
+              <MappingFragment StoreEntitySet="FindVerify">
+                <ScalarProperty Name="FveStatus" ColumnName="FveStatus" />
+                <ScalarProperty Name="FveOperateDate" ColumnName="FveOperateDate" />
+                <ScalarProperty Name="FveOperator" ColumnName="FveOperator" />
+                <ScalarProperty Name="FveVerifyStatus" ColumnName="FveVerifyStatus" />
+                <ScalarProperty Name="FveFor" ColumnName="FveFor" />
+                <ScalarProperty Name="FveAnswer" ColumnName="FveAnswer" />
+                <ScalarProperty Name="FveQuestion" ColumnName="FveQuestion" />
+                <ScalarProperty Name="FveType" ColumnName="FveType" />
+                <ScalarProperty Name="FuId" ColumnName="FuId" />
+                <ScalarProperty Name="FveId" ColumnName="FveId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindWithDrawCash">
+            <EntityTypeMapping TypeName="BlueVacationModel.FindWithDrawCash">
+              <MappingFragment StoreEntitySet="FindWithDrawCash">
+                <ScalarProperty Name="FwcStatus" ColumnName="FwcStatus" />
+                <ScalarProperty Name="FwcOperateDate" ColumnName="FwcOperateDate" />
+                <ScalarProperty Name="FwcOperator" ColumnName="FwcOperator" />
+                <ScalarProperty Name="FwcAuditDate" ColumnName="FwcAuditDate" />
+                <ScalarProperty Name="Fwc" ColumnName="Fwc" />
+                <ScalarProperty Name="FwcWithDrawIntroduce" ColumnName="FwcWithDrawIntroduce" />
+                <ScalarProperty Name="FwcWithDrawStatus" ColumnName="FwcWithDrawStatus" />
+                <ScalarProperty Name="FwcWithDrawDate" ColumnName="FwcWithDrawDate" />
+                <ScalarProperty Name="FwcAmount" ColumnName="FwcAmount" />
+                <ScalarProperty Name="FaId" ColumnName="FaId" />
+                <ScalarProperty Name="FuId" ColumnName="FuId" />
+                <ScalarProperty Name="FwcId" ColumnName="FwcId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

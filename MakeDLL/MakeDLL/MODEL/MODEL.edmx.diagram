@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="daacf41be53d4b2290ae66e878f94576" Name="Diagram1" ZoomLevel="62">
+        <EntityTypeShape EntityType="BlueVacationModel.FindAccounts" Width="1.5" PointX="3" PointY="52" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindAdversitement" Width="1.5" PointX="8" PointY="1" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindAlimama" Width="1.5" PointX="5.75" PointY="1.625" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindApply" Width="1.5" PointX="3" PointY="71.875" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindBackList" Width="1.5" PointX="3" PointY="60" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindCircle" Width="1.5" PointX="3" PointY="17.875" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindDevice" Width="1.5" PointX="3" PointY="36.875" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindDictionary" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindDocument" Width="1.5" PointX="3" PointY="33.25" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindFlow" Width="1.5" PointX="3" PointY="13.25" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindFriendGroup" Width="1.5" PointX="3" PointY="29.75" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindFriends" Width="1.5" PointX="5.25" PointY="35.875" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindGame" Width="1.5" PointX="3" PointY="4.625" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindGameRoom" Width="1.5" PointX="6" PointY="40.125" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindHonor" Width="1.5" PointX="3" PointY="75.75" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindInterest" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindMessage" Width="1.5" PointX="3" PointY="21.875" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindMoney" Width="1.5" PointX="3" PointY="48" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindPower" Width="1.5" PointX="3" PointY="44.5" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindProduct" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindPublicMessage" Width="1.5" PointX="3" PointY="25.75" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindRecharge" Width="1.5" PointX="3" PointY="63.25" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindTrendComments" Width="1.5" PointX="5.25" PointY="50.75" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindTrends" Width="1.5" PointX="3" PointY="67.375" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindUsers" Width="1.5" PointX="0.75" PointY="34" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindVerify" Width="1.5" PointX="10.25" PointY="1.375" />
+        <EntityTypeShape EntityType="BlueVacationModel.FindWithDrawCash" Width="1.5" PointX="5.25" PointY="44.625" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDACCO_FINDUSERS_FINDUSER" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDWITH_ACCOUNTS__FINDACCO" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDADVE_ALIMAM_AD_FINDALIM" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDAPPL_USERS_APP_FINDUSER" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDBACK_USERS_BAC_FINDUSER" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDCIRC_FINDUSERS_FINDUSER" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDDEVI_USERS_DEV_FINDUSER" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDDOCU_USERS_DOC_FINDUSER" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDFLOW_FINDUSERS_FINDUSER" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDFRIE_RELATIONS_FINDFRIE" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDFRIE_RELATIONS_FINDUSER" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDFRIE_USERS_FRI_FINDUSER" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDGAME_GAME_GAME_FINDGAME" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDGAME_USERS_GAM_FINDUSER" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDHONO_USERS_HON_FINDUSER" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDMESS_USERS_MES_FINDUSER" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDMONE_USERS_MON_FINDUSER" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDPOWE_USERS_POW_FINDUSER" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDPUBL_FINDUSERS_FINDUSER" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDRECH_FINDUSERS_FINDUSER" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDTREN_TRENDS_TR_FINDTREN" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDTREN_USERS_TRE_FINDUSER" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDTREN_RELATIONS_FINDUSER" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDVERI_USER_VERI_FINDUSER" />
+        <AssociationConnector Association="BlueVacationModel.FK_FINDWITH_USERS_WIT_FINDUSER" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
